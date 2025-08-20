@@ -1,0 +1,672 @@
+/*  */
+.top-header {
+    background: #000;
+    padding: 5px 0;
+    color: #fff;
+}
+.top-header .widget {
+    margin: 0;
+    color: #f0f0f0;
+}
+.top-header .widget .custom-html-widget {
+    font-size: 13px;
+}
+.top-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-header form {
+    position: relative;
+}
+.top-header form input {
+    outline: none;
+    min-width: 300px;
+    border: none;
+    background: rgb(255 255 255 / 80%);
+}
+.top-header form button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    background: none;
+    height: 34px;
+    padding: 0 10px;
+}
+.form-control:focus {
+    color: #000;
+    background-color: #fff;
+}
+
+.logo img {
+    height: 40px;
+}
+.top-menu {
+    display: flex;
+    align-items: end;
+    flex-flow: column;
+}
+.top-language .widget.widget_polylang {
+    margin: 0
+}
+.top-language .widget.widget_polylang ul {
+    margin: 0;
+}
+.top-language .widget.widget_polylang ul li {
+    display: inline-block;
+    color:#000;
+}
+.top-language .widget.widget_polylang ul li a {
+    color: #000;
+}
+
+.custom-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.custom-menu .menu-login a {
+    color: #3a7eb6;
+    font-weight: 500;
+    width: max-content;
+}
+.header-main {
+    /* box-shadow: 0 2px 4px #ddd; */
+}
+.header-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #f7f7f7;
+    z-index: 999;
+    box-shadow: 0 2px 4px #ddd;
+}
+
+
+/* Mega menu */
+.top-menu .mega-menu.menu-item {
+    position: static;
+}
+.top-menu .mega-menu.menu-item ul.sub-menu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding-bottom: 15px;
+    right: 0;
+    justify-content: center;
+}
+.top-menu .mega-menu.menu-item ul.sub-menu li {
+    width: 20%;
+    float: left;
+}
+.top-menu .mega-menu.menu-item ul.sub-menu li a {
+    text-align: center;
+    font-size: 16px;
+    border: none;
+}
+.top-menu .mega-menu.menu-item ul.sub-menu li img {
+    display: block;
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.menu-login {
+    position: relative;
+}
+.dropdownMenu {
+    display: none;
+}
+a#userDropdown {
+    text-decoration: underline;
+}
+.dropdownMenu.show {
+    display: block;
+    position: absolute;
+    top: 52px;
+    min-width: 200px;
+    background: #fff;
+    box-shadow: 0px 2px 4px #ddd;
+    padding: 10px 15px;
+    z-index: 88;
+}
+.dropdownMenu.show li {
+    list-style: none;
+    position: relative;
+    padding: 0 0 8px 15px;
+}
+.dropdownMenu.show li::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    background-color: #555;
+}
+.dropdownMenu.show li a {
+    color: #333;
+}
+.dropdownMenu.show li:hover a {
+    color: #3a7eb6;
+    text-decoration: underline;
+}
+.menu-login button.btn-login {
+    border: none;
+    background: no-repeat;
+    color: #3a7eb6;
+    font-weight: 500;
+    padding: 0;
+}
+
+/* Login modal */
+.menu-login .modal-header {
+    border: none;
+    padding: 0;
+}
+.menu-login ul#authTabs {
+    padding: 0 15px;
+    border: none;
+    gap: 10px;
+}
+.menu-login ul#authTabs li {
+
+}
+.menu-login ul#authTabs li a {
+    color: #000;
+    padding: 0 15px;
+    border-radius: 0;
+    box-shadow: 0 2px 4px #ddd;
+    height: 40px;
+    line-height: 40px;
+}
+.menu-login ul#authTabs li a.active {
+    border: none;
+    background: #3a7eb6;
+    color: #fff;
+    box-shadow: none;
+}
+.menu-login .tab-content {
+    padding: 10px 15px;
+}
+.menu-login .woocommerce-form label {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+}
+.menu-login .woocommerce-form .woocommerce-Input {
+    width: 100%;
+    margin: 5px 0;
+    height: 36px;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    outline: unset;
+}
+.menu-login .woocommerce-form .woocommerce-Input:focus-visible {
+    box-shadow: 0 2px 4px #ddd;
+}
+.menu-login .woocommerce-form .woocommerce-form-login__submit,
+.menu-login .woocommerce-form .woocommerce-form-register__submit {
+    margin: 10px 0 0;
+    border: none;
+    background: rgb(0 0 0 / 80%);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.menu-login .woocommerce-form .woocommerce-LostPassword {
+    text-decoration: underline;
+}
+
+.menu-login .social-login-buttons {
+    position: absolute;
+    bottom: 22px;
+    right: 20px;
+}
+.menu-login .social-login-buttons a {
+    background: #4285f4;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0px 15px 0 0;
+    border-radius: 4px;
+    gap: 3px;
+}
+.nsl-button-svg-container {
+    background: #fff;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 3px;
+}
+
+.menu-login .woocommerce-form-register .social-login-buttons {
+    bottom: 30px;
+}
+
+
+/* Homepage */
+.home-intro {
+    margin: 40px 0 60px;
+}
+.home-intro .row {
+    align-items: center;
+    justify-content: space-between;
+}
+.home-intro .row .col-image {
+    padding-right: 60px;
+}
+.home-intro .image img {
+    width: 100%;
+}
+.home-intro .content {
+    font-size: 16px;
+    line-height: 28px;
+} 
+.homepage-ds .viewmore {
+    margin: 30px 0 0;
+}
+.homepage-ds .viewmore a {
+    background-color: rgb(0 0 0 / 80%);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+.homepage-ds .viewmore a:hover {
+    background-color: #000;
+}
+.homepage-ds .description {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* .home-product-cat {
+    background: #f5f5f5;
+    padding: 50px 0;
+} */
+.home-product-cat .cat-item {
+    overflow: hidden;
+	display: block;
+}
+.home-product-cat .cat-item a {
+    transition: all 0.4s;
+    border: 1px solid #ddd;
+    display: block;
+    text-align: center;
+    padding: 20px 25px;
+    margin: 15px;
+}
+.home-product-cat .cat-item a:hover {
+    box-shadow: 0 3px 15px rgba(0,0,0,.4);
+    transform: scale(1.03);
+}
+.home-product-cat .cat-item img {
+    width: 100%;
+}
+.home-product-cat .cat-item .product-line {
+    color: rgb(0 0 0 / 50%);
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.home-product-cat .cat-item .title {
+    font-size: 24px;
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.home-philosophy {
+    background: #f5f5f5;
+    padding: 50px 0 0;
+    margin: 50px 0;
+}
+.philosophy-items {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.philosophy-items .item {
+    margin-bottom: 50px;
+    padding: 0 30px;
+    min-height: 130px;
+}
+.philosophy-items .item img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+.philosophy-items .item .title {
+    margin: 15px 0 0;
+    line-height: normal;
+}
+
+.expert-review .accordion.accordion-flush {
+    margin-top: 30px;
+}
+.expert-review .accordion-item {
+    margin-bottom: 20px;
+}
+.expert-review button.accordion-button {
+    font-size: 18px;
+    font-weight: 500;
+}
+.home-become-agent {
+    margin: 50px 0 60px;
+    /* background: #f5f5f5;
+    padding: 50px 0; */
+}
+.home-become-agent .row {
+    align-items: center;
+}
+.home-become-agent .description {
+    line-height: 28px;
+}
+
+/* Footer */
+.footer-widgets-area:nth-child(1) {
+    text-align: center;
+}
+.footer-widgets-area:nth-child(1) .widget {
+    margin-bottom: 10px;
+}
+.footer-widgets-area:nth-child(1) .widget_text {
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+/* Woo page */
+.thumbnail-term {
+    text-align: center;
+}
+.product-line {
+    text-transform: uppercase;
+    font-size: 24px;
+    color: rgb(0 0 0 / 50%);
+    margin-bottom: 10px;
+}
+.term-description {
+    font-size: 16px;
+    color: rgb(0 0 0 / 80%);
+    line-height: 28px;
+    margin-bottom: 30px;
+}
+.term-description h1,
+.term-description h2,
+.term-description h3,
+.term-description h4 {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.wrap-detail-term {
+    background: #e2e2e2;
+    width: fit-content;
+    padding: 3px 4px 2px;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid #e2e2e2;
+    margin: 0 auto 10px;
+}
+.wrap-detail-term a {
+    color: #666;
+}
+.archive.tax-product_brand .thumbnail-term img.thumb-term {
+    border: 3px solid #e2e2e2;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.custom-content-summary {
+    background: #f5f5f5;
+    padding: 50px 0 20px;
+}
+.custom-content-summary .custom-heading {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 35px;
+    position: relative;
+}
+.custom-content-summary .custom-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #337ab7;
+}
+.contenitore-icone a.item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.contenitore-icone a.item img {
+    width: 35px;
+}
+.contenitore-icone a.item h3 {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: none;
+}
+.custom-content-summary .custom-content img {
+    text-align: center;
+    margin: 20px auto;
+    display: block;
+}
+.contenitore-icone a.item:hover {
+    color: #4285f4;
+}
+.contact-page-form input,
+.contact-page-form textarea {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding-left: 10px;
+    outline: unset;
+    margin-top: 5px;
+}
+.contact-page-form textarea {
+    height: 100px;
+    padding-top: 5px;
+}
+.contact-page-form .wpcf7-submit {
+    width: fit-content;
+    border: none;
+    color: #fff;
+    background-color: rgb(0 0 0 / 80%);
+    padding: 0 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.contact-page-form .input-form {
+    margin-bottom: 15px;
+}
+
+.about-infomation .row {
+    margin: 40px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-infomation .row p img {
+    display: unset;
+}
+.about-infomation .row.order-1 {
+    flex-direction: row-reverse;
+}
+.about-infomation .row.order-2 {
+    background: #f7f7f7;
+}
+.about-infomation .image img {
+    width: 100%;
+}
+.about-infomation .content {
+
+}
+
+.agencyPage .agency-form .heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.agencyPage .agency-form input  {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding-left: 8px;
+    outline: unset;
+    margin-bottom: 15px;
+}
+.agencyPage .select2-container .select2-selection--single {
+    height: 45px;
+    border: 1px solid #ddd;
+    outline: unset;
+}
+.agencyPage .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 45px;
+}
+.agencyPage .agency-form .label-partner p,
+.agencyPage .agency-form .label-unit p {
+    font-weight: 600;
+}
+sup {
+    color: red;
+    margin: 0 3px;
+}
+.agencyPage .wpcf7 span.wpcf7-not-valid-tip {
+    margin: -10px 0 5px 0;
+    font-size: 13px;
+}
+.agencyPage .wpcf7-list-item {
+    display: inline-block;
+    margin: 10px 20px 0 0;
+}
+.agencyPage .agency-form .label-partner label {
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+}
+.agencyPage .agency-form .label-partner input[type="checkbox"] {
+    width: 20px !important;
+    height: 15px !important;
+    margin: 0 !important;
+}
+span.wpcf7-list-item-label {
+    font-weight: 500;
+}
+.agencyPage .agency-form .label-unit {
+    margin-top: 20px;
+}
+.agencyPage .agency-form .label-unit input {
+    width: 49%;
+    margin-top: 15px;
+}
+.agencyPage .agency-form .submit {
+    text-align: center;
+}
+.agencyPage .agency-form .submit .wpcf7-submit {
+    width: fit-content;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    background-color: rgb(0 0 0 / 80%);
+    padding: 0 50px;
+}
+span.wpcf7-spinner {
+    position: absolute;
+}
+.clinical-efficacy {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    
+}
+
+@media (max-width: 767px) {
+    .top-header .container {
+        display: block;
+    }
+    .top-header {
+        display: none;
+    }
+    .menu-login .dropdown span.ms-2 {
+        display: none;
+    }
+    .top-menu {
+        justify-content: end;
+    }
+    .home-intro, .home-become-agent {
+        margin: 30px 0;
+    }
+    .home-intro .row .col-image {
+        padding-right: 0;
+        margin-top: 30px;
+    }
+    .heading {
+        font-size: 22px !important;
+        line-height: normal !important;
+        text-align: center;
+    }
+    .homepage-ds .viewmore {
+        text-align: center;
+    }
+    .home-become-agent .agent-content {
+        margin-bottom: 30px;
+    }
+    .home-intro .row {
+        flex-direction: column-reverse;
+    }
+    .home-become-agent .row {
+        flex-direction: column-reverse;
+    }
+    .home-become-agent .agent-image {
+        margin-bottom: 20px;
+    }
+    .custom-content-summary .row {
+        flex-direction: column-reverse;
+    }
+    .custom-content-summary .custom-heading {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+    .list-products li .woocommerce-loop-product__title {
+        min-height: unset !important;
+    }
+    .list-products li .image-product a.img img {
+        height: 200px !important;
+    }
+
+    .agencyPage .agency-form .label-unit input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    
+}

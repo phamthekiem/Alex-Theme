@@ -1,0 +1,174 @@
+.works-section {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #f3f6f3;
+  background-image: url('../image/用紙配置.png');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: bgZoom 40s ease-in-out infinite;
+  overflow: hidden;
+}
+
+.works-content {
+  position: relative;
+  max-width: 80%;
+  text-align: right;
+}
+.works-image-link {
+  display: block;
+  position: relative; /* để works-title bám theo */
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.works-image-wrapper {
+  position: relative;
+  bottom: 17px;
+}
+
+.works-main {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.works-title {
+  position: absolute;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+.works-text {
+  margin-top: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: right;
+  cursor: pointer;
+  color:#111;
+  transition: transform 0.3s ease;
+  
+}
+.works-text:hover {
+  transform: scale(1.03);
+}
+
+
+/* Wrapper nút nằm góc phải */
+.work-link-wrapper {
+  position: absolute;
+  right: 0;
+  bottom: -120px;
+
+}
+
+/* Nút nhỏ */
+.work-link {
+  position: relative;
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  /* overflow: visible; */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.work-link img {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+}
+
+.work-link:hover {
+  transform: scale(1.05);
+}
+
+/* Overlay chữ */
+.overlay-box-work {
+  position: absolute;
+  bottom: -11px;
+  right: 10px;
+  text-align: right;
+  color: #fff;
+  text-shadow: 1px 1px 3px #212529;
+  /* z-index: 12; */
+}
+
+.overlay-box-work .line5 {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.overlay-box-work .line6 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: -9px;
+}
+
+/* Gradient overlay để khi hover mượt hơn */
+.works-image-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0));
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  z-index: 1;
+}
+/* Hover mượt */
+.works-image-link:hover .works-main {
+  transform: scale(1.08); /* Zoom nhẹ */
+  filter: brightness(0.85); /* Tối nhẹ */
+}
+
+.works-image-link:hover::before {
+  opacity: 1; /* Hiện gradient */
+}
+
+.works-image-link:hover .works-title {
+  transform: translateY(-50%) scale(1.08);
+  opacity: 1;
+  text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
+}
+
+@keyframes bgZoom {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+@media (max-width: 1024px) {
+
+  .works-content {
+    max-width: 95%;
+  }
+
+  .works-title {
+    font-size: 1.5rem;
+    right: 5%;
+  }
+
+  .works-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+
+  .overlay-box-work .line5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+}

@@ -1,0 +1,526 @@
+.access-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  animation: bgZoom 40s ease-in-out infinite;
+}
+
+.access-map{
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  overflow: hidden;
+  position: relative;
+}
+.address-box-001 {
+  width: 100%;
+  position: relative;
+  overflow: visible;
+  flex: 1;
+  bottom:25px
+}
+.footer-classic-gmap {
+    position: relative !important;
+    left: 0 !important;
+    padding: 0;
+    top: 26px;
+    right: 0;
+    bottom: 26px;
+    border: 4px solid #0e380e;
+
+}
+.footer-classic-gmap .google-map-container {
+  height: 500px;
+  overflow: hidden;
+}
+.footer-classic-gmap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+/* Bố cục địa chỉ + ảnh */
+.address-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+  flex-direction: row;
+}
+
+.address-wrapper-001 {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+  flex-direction: row;
+}
+.address-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  /* max-width: 820px; */
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+}
+
+.address-main {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 12px 0px;
+  border-bottom: 2px solid #15171a;
+  font-family: sans-serif;
+}
+
+.station-list {
+  display: grid;
+  row-gap: 8px; /* khoảng cách giữa các dòng */
+}
+
+.station-item {
+  display: grid;
+  grid-template-columns: 170px 120px 90px 25px; /* cột cố định */
+  align-items: center;
+  column-gap: 8px;
+}
+
+.station-item-001 {
+  display: grid;
+  grid-template-columns: 170px 120px 90px 25px; /* cột cố định */
+  align-items: center;
+  column-gap: 8px;
+}
+.station-item-001 .linestream {
+  font-weight: 600;
+  font-size: 17px;
+  font-family: sans-serif;
+}
+
+.station-item-001 .station {
+  font-weight: 600;
+  font-size: 17px;
+  font-family: sans-serif;
+}
+
+.station-item-001 .time {
+  font-weight: 600;
+  font-size: 17px;
+  font-family: sans-serif;
+}
+.station-item .linestream {
+  font-weight: 600;
+  font-size: 17px;
+  font-family: sans-serif;
+}
+
+.station-item .station {
+  font-weight: 600;
+  font-size: 17px;
+  font-family: sans-serif;
+}
+
+.station-item .time {
+  font-weight: 600;
+  font-size: 17px;
+  font-family: sans-serif;
+}
+
+.note {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #101010;
+  font-weight: 600;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0px;
+}
+
+.note .highlight {
+  color: #101010;
+  font-weight: bold;
+}
+
+/* ====== Khung video thay ảnh tòa nhà ====== */
+.building-video {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 600px;        /* giữ layout giống .building-image */
+}
+.default-building-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  border-radius: 6px;
+  display: block;
+}
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;     /* 16:9 */
+  border-radius: 6px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-wrapper-001 {
+  position: relative;
+  width: 100%;
+  padding-top: 80.25%;     /* 16:9 */
+  border-radius: 6px;
+  overflow: hidden;
+  background: #000;
+}
+.video-wrapper-001 iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  
+}
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  
+}
+
+/* ====== Nút mũi tên bên trái (ảnh) — click để đổi video ====== */
+/* Tăng vùng click + hiệu ứng nhẹ */
+.arrow-icon {
+    width: 25px;
+    height: 15px;
+    cursor: pointer;
+    transition: transform .15s ease, filter .15s ease, box-shadow .15s ease;
+    box-shadow: 0 0 0 1px #cfcfcf inset;
+    background: #fff;
+    margin: 0px
+};
+
+
+.arrow-icon:hover {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+  box-shadow: 0 0 0 1px #aaa inset;
+}
+
+.arrow-icon:active {
+  transform: scale(0.98);
+}
+
+.arrow-icon:focus {
+  outline: 2px solid #23a36b;
+  outline-offset: 2px;
+}
+
+@media (max-width: 1200px) {
+
+  .station-item {
+    grid-template-columns: 160px 1fr auto 36px; /* cột thứ hai rộng hơn */
+  }
+  .address-main { 
+    font-size: 23px; 
+  }
+  .footer-classic-gmap .google-map-container { 
+    height: 460px; 
+  }
+}
+
+@media (max-width: 1024px) {
+  .address-wrapper {
+    gap: 24px;
+  }
+  .station-item {
+    grid-template-columns: 150px 1fr auto 36px;
+  }
+  .station-item .linestream,
+  .station-item .station,
+  .station-item .time { 
+    font-size: 16px; 
+  }
+  .building-video { 
+    flex: 0 0 520px; 
+  }
+  .footer-classic-gmap .google-map-container { 
+    height: 420px; 
+  }
+}
+
+@media (max-width: 928px) {
+  .address-wrapper {
+    gap: 24px;
+  }
+  .station-item {
+    grid-template-columns: 130px 1fr auto 36px;
+  }
+  .station-item .linestream,
+  .station-item .station,
+  .station-item .time { 
+    font-size: 15px; 
+  }
+  .building-video { 
+    flex: 0 0 520px; 
+  }
+  .footer-classic-gmap .google-map-container { 
+    height: 420px; 
+  }
+}
+
+@media (max-width: 848px) {
+  .address-wrapper {
+    gap: 24px;
+  }
+  .station-item {
+    grid-template-columns: 100px 1fr auto 36px;
+  }
+  .station-item .linestream,
+  .station-item .station,
+  .station-item .time { 
+    font-size: 15px; 
+  }
+  .building-video { 
+    flex: 0 0 520px; 
+  }
+  .footer-classic-gmap .google-map-container { 
+    height: 420px; 
+  }
+}
+
+@media (max-width: 815px) {
+  .address-wrapper {
+    gap: 24px;
+  }
+  .station-item {
+    grid-template-columns: 58px 1fr auto 36px;
+  }
+  .station-item .linestream,
+  .station-item .station,
+  .station-item .time { 
+    font-size: 15px; 
+  }
+  .building-video { 
+    flex: 0 0 520px; 
+  }
+  .footer-classic-gmap .google-map-container { 
+    height: 420px; 
+  }
+}
+
+@media (max-width: 768px) {
+  /* Stack trái/phải */
+  .address-wrapper {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .address-box { padding: 16px; }
+
+  /* khung video full width */
+  .building-video {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+  .address-box-001{
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  /* chữ nhỏ hơn một nấc */
+  .address-main { 
+    font-size: 20px; 
+  }
+  .note { 
+    font-size: 16px; 
+  }
+
+  .station-item {
+    grid-template-columns: 140px 1fr auto 34px;
+    column-gap: 6px;
+  }
+
+  .station-item .linestream,
+  .station-item .station,
+  .station-item .time { 
+    font-size: 15px; 
+  }
+
+  .footer-classic-gmap .google-map-container { 
+    height: 380px; 
+  }
+
+
+
+
+  .address-wrapper-001 {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+
+  /* Box chứa map: bỏ offset, đảm bảo full width */
+  .address-box-001 {
+    position: static;   /* thay vì relative + bottom */
+    bottom: 0;
+    width: 100%;
+  }
+
+  /* Khung map: gọn gàng hơn ở mobile */
+  .footer-classic-gmap {
+    top: 0;             /* bỏ top:26px */
+    bottom: auto;
+    border-width: 3px;  /* viền mảnh hơn chút cho mobile */
+  }
+  .footer-classic-gmap .google-map-container {
+    height: 340px;      /* chiều cao hợp lý ở mobile */
+  }
+
+  /* Khung video full-width */
+  .building-video {
+    flex: 1 1 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Ảnh mặc định phủ kín khung, tránh méo/viền đen */
+  .default-building-img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Nếu dùng .video-wrapper-001 cho khung khác, cho cùng hành vi */
+  .video-wrapper-001 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .address-box { 
+    padding: 14px; 
+  }
+  .address-main {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+  .note { 
+    font-size: 15px; 
+  }
+
+  /* 3 dòng text sang 1 cột, mũi tên cột riêng bên phải */
+  .station-item {
+    grid-template-columns: 1fr 34px;
+    grid-row-gap: 2px;
+    align-items: start;
+  }
+
+  .station-item .linestream,
+  .station-item .station,
+  .station-item .time {
+    grid-column: 1 / 2;
+    font-size: 14px;
+  }
+  .station-item .time { 
+    margin-bottom: 4px; 
+  }
+
+  .station-item .arrow-icon {
+    grid-column: 2 / 3;
+    grid-row: 1 / span 3;
+    align-self: center;
+    justify-self: end;
+  }
+
+    /* 3 dòng text sang 1 cột, mũi tên cột riêng bên phải */
+  .station-item-001 {
+    grid-template-columns: 1fr 34px;
+    grid-row-gap: 2px;
+    align-items: start;
+  }
+
+  .station-item-001 .linestream,
+  .station-item-001 .station,
+  .station-item-001 .time {
+    grid-column: 1 / 2;
+    font-size: 14px;
+  }
+  .station-item-001 .time { 
+    margin-bottom: 4px; 
+  }
+
+  .station-item-001 .arrow-icon {
+    grid-column: 2 / 3;
+    grid-row: 1 / span 3;
+    align-self: center;
+    justify-self: end;
+  }
+
+  .arrow-icon { 
+    width: 24px; 
+    height: 14px; 
+  }
+
+  .footer-classic-gmap .google-map-container { 
+    height: 320px; 
+  }
+
+  .footer-classic-gmap { border-width: 2px; }
+
+
+  .address-wrapper-001 { gap: 16px; }
+}
+
+
+@media (max-width: 480px) {
+  .address-box 
+  { 
+    padding: 12px; 
+  }
+  .address-main { 
+    font-size: 17px; 
+  }
+  .note { 
+    font-size: 14px; 
+  }
+
+  .station-item {
+    grid-template-columns: 1fr 32px;
+  }
+    .station-item-001 {
+    grid-template-columns: 1fr 32px;
+  }
+  .arrow-icon { 
+    width: 22px; 
+    height: 13px; 
+
+  }
+
+  .footer-classic-gmap .google-map-container { height: 260px; }
+
+  /* Tăng bán kính bo (nếu muốn mềm mại hơn ở mobile nhỏ) */
+  .footer-classic-gmap,
+  .video-wrapper,
+  .video-wrapper-001 { border-radius: 8px; }
+}
+
+@keyframes bgZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
