@@ -1,0 +1,738 @@
+.staff-comment-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sf-header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.staff-comment-detail{
+  overflow: hidden;
+  position: relative;
+}
+.sf-bg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+
+.staff-block {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+  flex-direction: row;
+  margin: 60px auto;
+}
+
+.staff-block.reverse {
+  flex-direction: row-reverse;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+  margin: 60px auto;
+}
+
+.staff-block.reverse-bg {
+  flex-direction: column-reverse;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+  position: relative;
+  z-index: 2;
+  margin: 60px auto;
+}
+
+.staff-image {
+  max-width: 420px;
+  width: 100%;
+  position: relative;
+}
+
+.staff-image-reverse {
+  max-width: 420px;
+  width: 100%;
+  position: relative;
+}
+
+.staff-image-reverse-bg {
+  /* max-width: 100%; */
+  width: 100%;
+  position: relative;
+}
+
+.staff-text-bg {
+  flex: 1; /* 👈 không giãn full */
+  max-width: 100%;
+  width: 100%;
+  z-index: 2;
+}
+.staff-frame {
+  position: relative;
+  width: 100%;
+  /* aspect-ratio: 3/4; */
+}
+
+
+.staff-frame-bg {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  object-fit: cover;
+  z-index: 4;
+  top: 0;
+  left: 0;
+}
+
+.staff-frame-top
+{
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  pointer-events: none;
+  top: 20px;
+  left: 20px;
+}
+.staff-frame-middle
+{
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  pointer-events: none;
+  top: -4px;
+  left: 0px;
+}
+
+.staff-frame-brigde {
+  position: relative;
+  width: 100%;
+  max-width: 370px;
+  height: auto;
+  object-fit: cover;
+  z-index: 4;
+  top: 0;
+  left: 0;
+}
+
+.staff-frame-bottom
+{
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  pointer-events: none;
+  top: -30px;
+  left: 15px;
+}
+
+.staff-frame-braved{
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  pointer-events: none;
+  top: -34px;
+  left: 15px;
+}
+
+.staff-frame-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  z-index: 4;
+  top: 0;
+  left: 0;
+}
+
+.staff-frame-underground {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  max-width: 98%;
+  height: auto;
+  pointer-events: none;
+  top: -39px;
+  left: 15px;
+}
+
+.staff-frame-scrapper {
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  max-width: 98%;
+  height: auto;
+  pointer-events: none;
+  top: -39px;
+  left: 15px;
+}
+
+.staff-text {
+  flex: 1; /* 👈 không giãn full */
+  max-width: 1020px;
+  width: 100%;
+  z-index: 2;
+}
+
+.staff-section-box {
+  border-radius: 33px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #fff;
+  position: relative;
+}
+
+.staff-avatar-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.staff-section-box .staff-subtile {
+  color: #e60012;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.staff-section-box .staff-subtile::before {
+  position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../image/黄色_下敷き.png);
+    z-index: -1;
+    width: 100%;
+    max-width: 100%;
+}
+.staff-name-box {
+  position: relative;
+  top: -73px; /* điều chỉnh vị trí tùy ảnh */
+  left: -40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 5;
+}
+
+
+
+.name-bg-white {
+  z-index: 3;
+  position: absolute;
+  bottom: 7px;
+  left: 23px;
+  height: auto;
+  width: 100%;
+  max-width: 200px;
+  min-height: 150px;
+  
+}
+
+.name-bg-green {
+  z-index: 2;
+  left: 10px;
+  height: auto;
+  width: 100%;
+  max-width: 200px;
+  min-height: 150px;
+  position: relative;
+  bottom: 13px;
+  left: 10px;
+}
+
+.name-text {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  padding-left: 25px;
+  padding-top: 5px;
+}
+
+.staff-department {
+  font-size: 14px;
+  margin: 0;
+}
+
+.staff-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.name-text {
+  position: absolute;
+  z-index: 3;
+  color: #fff;
+  top: 40px;
+  left: 22px;
+  transform: skewY(-18deg); /* 👈 tạo góc nghiêng */
+}
+
+.staff-department,
+.staff-name {
+
+  display: inline-block;
+}
+
+.staff-department {
+  font-size: 12px;
+  margin: 0;
+}
+
+.staff-name {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  font-family: cursive;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+
+/* ====== ≤1280px: thu ảnh và ép về mép phải ====== */
+@media (max-width: 1280px) {
+  
+  .staff-image-reverse-bg {
+    max-width: 100%;
+    margin-left: auto;     /* đẩy khối ảnh sang phải */
+    position: relative;
+  }
+
+  /* Ổn định chiều cao khung để overlay bám chuẩn */
+
+
+  .staff-frame-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: 4;
+  }
+
+  /* Viền trắng & mảng xanh dính ảnh */
+  .staff-frame-scrapper {    /* viền trắng */
+    left: 8px;
+    top: -30px;
+    max-width: 98%;
+  }
+  .staff-frame-underground { /* mảng xanh */
+    left: 8px;
+    top: -30px;
+    max-width: 98%;
+  }
+}
+
+/* ====== ≤1024px: thu nhỏ thêm, giữ ảnh mép phải ====== */
+@media (max-width: 1024px) {
+  .staff-image-reverse-bg {max-width: 100%;}
+  .staff-frame-scrapper {left: 10px;top: -23px;max-width: 97%;}
+  .staff-frame-underground {left: 10px;top: -23px;max-width: 97%;}
+}
+
+/* Tablet và nhỏ hơn */
+@media (max-width: 768px) {
+  .staff-block.reverse-bg {
+    flex-direction: column-reverse;  /* text trước, ảnh sau */
+    align-items: stretch;
+    gap: 2.5rem;
+  }
+
+
+
+  .staff-text-bg { max-width: 100%; }
+
+  
+
+  .staff-frame-scrapper {left: 14px;top: -16px;max-width: 96%;}
+  .staff-frame-underground {left: 14px;top: -16px;max-width: 96%;}
+
+  .staff-block {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .staff-block.reverse {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 3.5rem;
+  }
+  .staff-image {
+  max-width: 330px;
+  margin:0 auto;
+}
+.staff-image-reverse {
+  max-width: 360px;
+  margin:0 auto;
+}
+
+  .staff-frame-bg,
+ 
+  .staff-frame-middle {
+    max-width: 100%;
+    left: 0;
+  }
+ .staff-frame-top{
+  left:20px
+ }
+
+  .staff-frame-bottom{
+    left: 10px;
+  }
+ 
+  .staff-frame-braved {
+    left: 10px;
+  }
+ .staff-frame-brigde{
+  left: 0px;
+  max-width: 100%;
+
+ }
+
+  .staff-name-box {
+    position: relative;
+    bottom: auto;
+    left: -39px;
+    /* margin-top: 480px; */
+    transform: scale(0.9);
+  }
+
+  .name-bg-white,
+  .name-bg-green {
+    max-width: 160px;
+  }
+
+  .name-text {
+    top: 48px;
+    left: 6px;
+    transform: skewY(-18deg) scale(0.95);
+  }
+
+  .staff-text {
+    max-width: 100%;
+  }
+
+  .staff-section-box {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .staff-section-box .staff-subtile {
+    font-size: 18px;
+  }
+
+  .staff-department {
+    font-size: 12px;
+  }
+
+  .staff-name {
+    font-size: 22px;
+  }
+}
+
+/* Điện thoại vừa (<=576px) */
+@media (max-width: 576px) {
+  .staff-image {
+    max-width: 260px;
+  }
+
+  .staff-name-box {
+    transform: scale(0.85);
+    /* margin-top: 406px; */
+  }
+
+  .name-bg-white,
+  .name-bg-green {
+    max-width: 140px;
+  }
+
+  .name-text {
+    top: 52px;
+    left: -2px;
+    transform: skewY(-22deg) scale(0.9);
+  }
+
+  .staff-section-box {
+    padding: 12px;
+  }
+
+  .staff-section-box .staff-subtile {
+    font-size: 16px;
+  }
+
+  .staff-name {
+    font-size: 20px;
+  }
+
+
+  .staff-frame-scrapper {left: 12px;top: -10px;max-width: 95%;}
+  .staff-frame-underground {left: 12px;top: -10px;max-width: 95%;}
+}
+
+/* Điện thoại nhỏ (<=480px) */
+@media (max-width: 480px) {
+  .staff-image {
+    max-width: 220px;
+  }
+
+  .staff-name-box {
+    transform: scale(0.8);
+    /* margin-top: 330px; */
+  }
+
+  .name-bg-white,
+  .name-bg-green {
+    max-width: 120px;
+  }
+
+  .name-text {
+    top: 60px;
+    left: -6px;
+    transform: skewY(-27deg) scale(0.87);
+  }
+
+  .staff-section-box {
+    padding: 10px;
+  }
+
+  .staff-section-box .staff-subtile {
+    font-size: 15px;
+  }
+
+  .staff-department {
+    font-size: 11px;
+  }
+
+  .staff-name {
+    font-size: 18px;
+  }
+
+
+  .staff-frame-scrapper {left: 10px;top: -8px;}
+  .staff-frame-underground {left: 10px;top: -8px;}
+}
+
+@media (max-width: 460px) {
+  .staff-image-reverse {
+    max-width: 260px;
+    margin: 0px auto;
+  }
+
+  .staff-frame-braved {
+    left: 15px;
+    top: -12px;
+    max-width: 230px;
+  }
+  .staff-frame-bottom {
+    left: 15px;
+    top: -9px;
+    max-width: 230px;
+  }
+ 
+}
+@media (max-width: 400px) {
+  .staff-image-reverse {
+    max-width: 230px;
+    margin: 0px auto;
+  }
+
+  .staff-frame-braved {
+    left: 12px;
+    top: -12px;
+    max-width: 204px;
+  }
+  .staff-frame-bottom {
+    left: 12px;
+    top: -9px;
+    max-width: 204px;
+  }
+
+  .staff-frame-scrapper {left: 9px;top: -4px;}
+  .staff-frame-underground {left: 9px;top: -4px;}
+}
+
+@media (max-width: 360px) {
+
+  /* Viền trắng & mảng xanh bám sát ảnh */
+  .staff-frame-scrapper { /* viền trắng */
+    left: 8px;
+    top: -4px;
+    max-width: 94%;
+  }
+  .staff-frame-underground { /* mảng xanh */
+    left: 8px;
+    top: -4px;
+    max-width: 94%;
+  }
+
+  /* Nội dung box thu gọn padding chút cho thoáng */
+  .staff-section-box { padding: 12px; }
+  .staff-section-box .staff-subtile { font-size: 15px; }
+}
+
+/* ====== ≤320px: cực nhỏ – thêm chút co giãn */
+@media (max-width: 320px) {
+
+  .staff-frame-scrapper {left: 7px;top: -4px;}
+  .staff-frame-underground {left: 7px;top: -4px;}
+
+  .staff-section-box { padding: 10px; }
+  .staff-section-box .staff-subtile { font-size: 14px; }
+}
+
+@media (max-width: 315px) {
+  .staff-image-reverse {
+    max-width: 200px;
+    margin: 0px auto;
+  }
+
+  .staff-frame-braved {
+    left: 10px;
+    top: -14px;
+    max-width: 180px;
+  }
+  .staff-frame-bottom {
+    left: 10px;
+    top: -11px;
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 308px) {
+    .staff-image {
+    max-width: 110px;
+  }
+      .staff-name-box {
+        transform: scale(0.8);
+        /* margin-top: 120px; */
+  }
+    .name-text {
+    top: 48px;
+    left: 8px;
+    transform: skewY(-27deg);
+  }
+    .staff-department {
+    font-size: 10px;
+}
+}
+
+@media (max-width: 287px) {
+  .staff-image-reverse {
+    max-width: 150px;
+    margin: 0px auto;
+  }
+
+  .staff-frame-braved {
+    left: 8px;
+    top: -9px;
+    max-width: 135px;
+  }
+  .staff-frame-bottom {
+    left: 8px;
+    top: -7px;
+    max-width: 135px;
+  }
+}
+@media (max-width: 240px) {
+  .staff-image-reverse {
+    max-width: 120px;
+    margin: 0px auto;
+  }
+
+  .staff-frame-braved {
+    left: 5px;
+    top: -10px;
+    max-width: 110px;
+  }
+  .staff-frame-bottom {
+    left: 5px;
+    top: -8px;
+    max-width: 110px;
+  }
+}
+
+@media (max-width: 208px) {
+  .staff-image-reverse {
+    max-width: 90px;
+    margin: 0px auto;
+  }
+
+  .staff-frame-braved {
+    left: 5px;
+    top: -4px;
+    max-width: 80px;
+  }
+  .staff-frame-bottom {
+    left: 5px;
+    top: -4px;
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 178px) {
+  .staff-image-reverse {
+    max-width: 60px;
+    margin: 0px auto;
+  }
+
+  .staff-frame-braved {
+    left: 2px;
+    top: -4px;
+    max-width: 55px;
+  }
+  .staff-frame-bottom {
+    left: 2px;
+    top: -3px;
+    max-width: 55px;
+  }
+}
+@media (max-width: 196px) {
+    .staff-image {
+    max-width: 90px;
+  }
+    .staff-name-box {
+      transform: scale(0.8);
+      /* margin-top: 60px; */
+  }
+    .name-text {
+      top: 59px;
+      left: 8px;
+      transform: skewY(-34deg);
+  }
+    .staff-department {
+      font-size: 8px;
+  }
+    .staff-name {
+      font-size: 8px;
+  }
+}
