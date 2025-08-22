@@ -1,0 +1,60 @@
+# Ignore WordPress core
+wp-admin/
+wp-includes/
+license.txt
+readme.html
+
+# Ignore uploads & cache
+wp-content/uploads/
+wp-content/cache/
+wp-content/backups/
+wp-content/upgrade/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/object-cache.php
+wp-content/debug.log
+
+# 
+wp-content/themes/*
+!wp-content/themes/alex/
+wp-content/plugins/*
+# !wp-content/plugins/my-plugin/
+
+# mu-plugins 
+wp-content/mu-plugins/*
+# !wp-content/mu-plugins/my-mu-plugin.php
+
+# Composer / Node
+vendor/
+composer.lock
+node_modules/
+npm-debug.log
+yarn.lock
+yarn-error.log
+
+# IDE / Editor
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# OS generated files
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# SASS / LESS cache
+.sass-cache/
+*.css.map
+*.sass.map
+*.scssc
+
+# Env files
+.env
+.env.*
