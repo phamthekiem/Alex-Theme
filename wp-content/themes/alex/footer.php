@@ -10,12 +10,7 @@
  */
 
 ?>
-		</div>
 	</div><!-- #content -->
-
-	
-
-	<?php //do_action( 'sh_after_footer' );?>
 	
 </div><!-- #page -->
 

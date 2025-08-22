@@ -105,7 +105,8 @@
   pointer-events: none;
   transition: opacity 0.3s ease;
   transform: skew(-5deg) translate(0px, 0px);
-  margin: 70px 18px 0px 20px;
+  margin: 40px 18px 0px 18px;
+
 }
 
 .stack-item:hover{
@@ -119,7 +120,7 @@
 /* Tên nằm dưới ảnh */
 .stack-name {
   position: relative;
-  top: 400px;
+  top: 370px;
   left: 0;
   width: 80%;
   padding: 6px 0;
@@ -268,33 +269,16 @@ body.popup-open {
 
 @media (max-width: 1425px) {
  .stack-item::after {
-    margin: 70px 17px 0px 22px;
+
+    margin: 41px 17px 0px 22px;
 }
   .stack-name {
-  top: 388px;
+  top: 360px;
+
 }
   .stack-item img {
     margin-left: 2px;
 }
-}
-
-
-@media (max-width: 1380px) {
-  .stack-item::after {
-   margin: 70px 22px 0px 19px;
-  }
-
-  .stack-name {
-    top: 469px;
-  }
-
-  .stack-item {
-    flex: 0 0 calc((100% - 20px * 3) / 4);
-  }
-
-  .stack-item img {
-    margin-left: -2px;
-  }
 }
 
 
@@ -316,27 +300,33 @@ body.popup-open {
     margin-left: -2px;
 }
 }
+
+
 @media (max-width: 1330px) {
 
   .stack-name {
-    top: 459px;
+    top: 404px;
+
   }
 }
 @media (max-width: 1300px) {
 
   .stack-item::after {
-   margin: 70px 22px 0px 18px;
+
+
+   margin: 40px 22px 0px 19px;
   }
 
   .stack-name {
-    top: 420px;
+    top: 388px;
   }
 
   .stack-item {
         flex: 0 0 calc((100% - 20px * 3) / 4);
   }
   .stack-item img {
-        margin-left: -4px;
+        margin-left: 0px;
+
   }
 }
 /* Laptop vừa (dưới 1200px) */
@@ -352,10 +342,10 @@ body.popup-open {
 
 
   .stack-item::after {
-    margin: 67px 18px 0px 22px;
+    margin: 38px 18px 0px 18px;
   }
   .stack-item img {
-    margin-left: 1px;
+    margin-left: 0px;
   }
 }
 
@@ -365,15 +355,16 @@ body.popup-open {
   }
 
   .stack-name {
-    top: 357px;
+    top: 336px;
     font-size: 16px;
   }
 
   .stack-item::after {
-    margin: 67px 16px 0px 16px;
+    margin: 35px 18px 0px 16px;
   }
   .stack-item img {
-    margin-left: 1px;
+    margin-left: 0px;
+
   }
 }
 
@@ -383,15 +374,16 @@ body.popup-open {
   }
 
   .stack-name {
-    top: 350px;
+    top: 300px;
     font-size: 16px;
   }
 
   .stack-item::after {
-    margin: 67px 16px 0px 16px;
+    margin: 36px 16px 0px 16px;
   }
   .stack-item img {
-    margin-left: 1px;
+    margin-left: 0px;
+
   }
 }
 
@@ -402,7 +394,8 @@ body.popup-open {
   }
 
   .stack-name {
-    top: 450px;
+    top: 400px;
+
     font-size: 15px;
   }
 
@@ -411,13 +404,14 @@ body.popup-open {
   }
 
   .stack-item::after {
-    margin: 67px 18px 0px 18px;
+    margin: 36px 20px 0px 20px;
+
   }
 }
 
 @media (max-width: 950px) {
   .stack-name {
-    top: 410px;
+    top: 385px;
     font-size: 15px;
   }
 }
@@ -428,7 +422,7 @@ body.popup-open {
   }
 
   .stack-name {
-    top: 380px;
+    top: 350px;
     font-size: 15px;
   }
 
@@ -436,14 +430,15 @@ body.popup-open {
     font-size: 30px;
   }
   .stack-item::after {
-        margin: 67px 16px 0px 18px;
+    margin: 35px 19px 0px 19px;
+
   }
 }
 /* Tablet ngang (dưới 992px) */
 @media (max-width: 810px) {
 
   .stack-name {
-    top: 358px;
+    top: 310px;
     font-size: 15px;
   }
 
@@ -460,7 +455,7 @@ body.popup-open {
   }
 
   .stack-name {
-    top: 498px;
+    top: 445px;
     font-size: 14px;
   }
 
@@ -471,7 +466,7 @@ body.popup-open {
     font-size: 16px;
   }
   .stack-item::after {
-    margin: 63px 19px 0px 19px;
+    margin: 33px 24px 0px 24px;
   }
   .popup-frame {
     width: 220px;
@@ -488,15 +483,27 @@ body.popup-open {
 }
 @media (max-width: 670px) {
   .stack-name {
-    top: 459px;
+    top: 423px;
+    font-size: 14px;
+  }
+ .stack-item::after {
+        margin: 33px 20px 0px 20px;
+  }
+}
+@media (max-width: 670px) {
+  .stack-name {
+    top: 400px;
     font-size: 14px;
   }
 }
 
 @media (max-width: 650px) {
   .stack-name {
-    top: 421px;
+    top: 380px;
     font-size: 14px;
+  }
+   .stack-item::after {
+        margin: 33px 20px 0px 20px;
   }
 }
 @media (max-width: 600px) {
@@ -532,7 +539,8 @@ body.popup-open {
     flex: 0 0 100%; /* 1 ảnh trên 1 hàng */
   }
   .stack-item::after {
-    margin: 74px 32px 0px 35px;
+
+    margin: 42px 34px 0px 34px;
   }
   
   .stack-item img {
@@ -540,7 +548,7 @@ body.popup-open {
   }
 
   .stack-name {
-    top: 730px;
+    top: 710px;
     font-size: 21px;
     width: 85%;
   }
@@ -551,18 +559,18 @@ body.popup-open {
 }
 @media (max-width: 550px) {
   .stack-name {
-    top: 679px;
+    top: 650px;
     font-size: 17px;
     width: 85%;
   }
   .stack-item::after {
-    margin: 68px 30px 0px 37px;
+    margin: 38px 31px 0px 34px;
   }
 }
 
 @media (max-width: 500px) {
   .stack-name {
-    top: 628px;
+    top: 610px;
     font-size: 17px;
     width: 85%;
   }
@@ -579,7 +587,7 @@ body.popup-open {
   }
 
   .stack-item::after {
-    margin: 63px 28px 0px 31px;
+    margin: 35px 28px 0px 31px;
   }
 
   .stack-item img {
@@ -587,7 +595,7 @@ body.popup-open {
   }
 
   .stack-name {
-    top: 618px;
+    top: 580px;
     font-size: 15px;
     width: 85%;
   }
@@ -610,42 +618,44 @@ body.popup-open {
     width: 85%;
   }
   .stack-item::after {
-    margin: 62px 24px 0px 26px;
+    margin: 35px 27px 0px 27px;
   }
 
 }
 
 @media (max-width: 420px) {
   .stack-name {
-    top: 501px;
+    top: 490px;
     font-size: 15px;
     width: 85%;
   }
 }
 @media (max-width: 390px) {
   .stack-name {
-    top: 460px;
+    top: 450px;
     font-size: 15px;
     width: 85%;
   }
   .stack-item::after {
-    margin: 66px 22px 0px 26px;
-  }
+    margin: 35px 22px 0px 26px;
+
+}
 }
 @media (max-width: 360px) {
   .stack-name {
-    top: 452px;
+    top: 410px;
     font-size: 13px;
     width: 85%;
   }
   .stack-item::after {
-    margin: 62px 20px 0px 22px;
+    margin: 32px 20px 0px 22px;
+
   }
 
 }
 @media (max-width: 340px) {
   .stack-name {
-    top: 408px;
+    top: 375px;
     font-size: 13px;
     width: 85%;
   }
@@ -653,13 +663,13 @@ body.popup-open {
 
 @media (max-width: 310px) {
   .stack-name {
-    top: 368px;
+    top: 335px;
     font-size: 13px;
     width: 85%;
   }
   .stack-item::after
   {
-    margin: 63px 17px 0px 19px;
+    margin: 33px 17px 0px 19px;
   }
 }
 
@@ -669,7 +679,7 @@ body.popup-open {
   }
 
   .stack-item::after {
-    margin: 63px 14px 0px 19px;
+    margin: 32px 15px 0px 15px;
   }
 
 }
@@ -680,6 +690,6 @@ body.popup-open {
   }
 
   .stack-item::after {
-    margin: 63px 14px 0px 15px;
+    margin: 33px 14px 0px 14px;
   }
 }

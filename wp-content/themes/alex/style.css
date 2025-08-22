@@ -41,6 +41,9 @@ Tags: alex
 # Normalize
 --------------------------------------------------------------*/
 
+.site-content {
+	position: relative;
+}
 
 /*--------------------------------------------------------------
 # Header
@@ -48,7 +51,7 @@ Tags: alex
 .site-title, .site-description {font-size: 0;margin: 0}
 .site-header .header-content {
 	position: relative;
-	padding: 10px 0;
+	padding: 10px 0 25px;
 }
 /* Header style 1 */
 .header-banner #showmenu {
@@ -91,6 +94,7 @@ Tags: alex
 	color: #000;
 	text-transform: uppercase;
 	margin-left: 40px;
+	text-decoration: none;
 }
 .main-navigation ul.menu > li.menu-item-has-children > a:after {
     content: "\f107";

@@ -167,6 +167,7 @@
   background-color: #fff2f2;
   color: #a00000;
   border: 2px solid #a00000;
+  text-decoration: none;
 }
 .recruit-detail-btn:hover::before {
 

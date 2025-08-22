@@ -6,7 +6,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  z-index: -1;
+  z-index: 0;
   animation: bgZoom 40s ease-in-out infinite;
 }
 

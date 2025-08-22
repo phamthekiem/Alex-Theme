@@ -61,6 +61,7 @@
 }
 .top-language .widget.widget_polylang ul li a {
     color: #000;
+    text-decoration: none;
 }
 
 .custom-menu {
