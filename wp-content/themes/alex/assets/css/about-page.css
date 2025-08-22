@@ -22,7 +22,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  z-index: -1;
+  z-index: 1;
   animation: fadeBg 10s infinite, bgZoom 40s ease-in-out infinite;
   opacity: 0;
   transition: opacity 1s ease-in-out;

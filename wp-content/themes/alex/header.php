@@ -58,10 +58,4 @@
 	
 	<div id="content" class="site-content">
 
-		<?php //do_action( 'before_content' ) ?>
-
-		<?php do_action( 'before_loop_main_content' ) ?>
-
-		<?php if ( !is_home() && !is_front_page()  ) { ?>
-			<div class="container">
-		<?php } ?>
+		

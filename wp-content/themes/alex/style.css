@@ -40,7 +40,14 @@ Tags: alex
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+<<<<<<< HEAD
+
+.site-content {
+	position: relative;
+}
+=======
 a:hover, a:active, a:focus, a:visited {text-decoration: none}
+>>>>>>> origin
 
 /*--------------------------------------------------------------
 # Header
@@ -48,7 +55,7 @@ a:hover, a:active, a:focus, a:visited {text-decoration: none}
 .site-title, .site-description {font-size: 0;margin: 0}
 .site-header .header-content {
 	position: relative;
-	padding: 10px 0;
+	padding: 10px 0 25px;
 }
 /* Header style 1 */
 .header-banner #showmenu {
@@ -91,6 +98,7 @@ a:hover, a:active, a:focus, a:visited {text-decoration: none}
 	color: #000;
 	text-transform: uppercase;
 	margin-left: 40px;
+	text-decoration: none;
 }
 .main-navigation ul.menu > li.menu-item-has-children > a:after {
     content: "\f107";
