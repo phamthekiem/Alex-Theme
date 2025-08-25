@@ -38,7 +38,7 @@ get_header(); ?>
             <!-- Bên phải: ABOUT + 会社情報 -->
             <div class="about-right-text">
                 <span class="company-info"><?php the_field('about_page_description') ?></span>
-                <h1 class="about-heading"><?php the_title(); ?></h1>
+                <h1 class="about-heading text-uppercase"><?php the_title(); ?></h1>
             </div>
         </div>
     </div>
