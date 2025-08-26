@@ -11,7 +11,6 @@
 get_header(); ?>
 
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/top-page.css">
-
 	<!-- Banner -->
 	<section class="hero">
 		<div class="hero-bg" style="background-image: url('<?php the_field('home_banner_image') ?>')"></div>
@@ -60,7 +59,6 @@ get_header(); ?>
 								</div>
 							<?php endwhile;  wp_reset_postdata(); ?>
 						</div>
-					
 						<div class="scroll-buttons">
 							<button class="scroll-btn up" onclick="scrollNews(-1)">
 								<svg viewBox="0 0 10 6"><path d="M1 5L5 1L9 5"/></svg>
@@ -92,9 +90,7 @@ get_header(); ?>
 					</div>
 				<?php endif; ?>	
 			</div>
-
 		</div>
-		
 	</section> 
 
 	<!-- List page -->

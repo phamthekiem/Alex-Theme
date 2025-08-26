@@ -11,14 +11,14 @@
     --nav-w-mini: 64px;   /* width khi thu */
   }
 
-  *{box-sizing:border-box}
+  /* *{box-sizing:border-box}
   html,body{height:100%}
   body{
     margin:0;
     font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
     background:#fff;
     color:#222;
-  }
+  } */
 
   /* ====== Layout ====== */
   .app{
