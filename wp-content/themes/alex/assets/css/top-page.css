@@ -533,13 +533,13 @@ html,body {
 }
 .overlay-box-side{
   position: absolute;
-  right: clamp(14px, 2.6vw, 49px);
-  bottom: clamp(10px, 1.8vw, 15px);
+  right: 39px;
+  bottom: -20px;
    /* chừa “safe area” để không đè viền trắng */
   padding: clamp(6px, .8vw, 10px) clamp(10px, 1.2vw, 16px);
 
   /* nghiêng cái hộp để song song cạnh banner */
-  transform: skewX(-15deg) translateX(-36px) translateY(-45px);
+  transform: skewX(-15deg) translateX(-36px) translateY(-52px);
   transform-origin: right bottom;
   text-align: right;
   color:#fff;
@@ -557,7 +557,7 @@ html,body {
 .overlay-box-side .line4{
   color:#ff2a6c;
   font-weight: 800;
-  font-size: clamp(12px, 1.6vw, 22px);
+  font-size: 22px;
   line-height: 1.1;
   /* margin: 15px 60px; */
 }
@@ -570,7 +570,7 @@ html,body {
   /* margin: 15px 30px; */
 }
 .overlay-box-side .line6{
-  font-size: clamp(10px, 1.2vw, 15px);
+  font-size: clamp(10px, 1.2vw, 14px);
   line-height: 0;
 }
 
@@ -633,7 +633,7 @@ html,body {
   flex: 1;
   position: absolute;
   right: 0;
-  bottom: -45px;
+  bottom: -30px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -645,16 +645,16 @@ html,body {
 
 /* Chữ nhỏ trên cùng */
 .sub-title {
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   margin-bottom: auto;
   color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Chữ lớn ABOUT dưới đáy */
-.menu-title {
+.top-page-menu .container-menu .menu-grid .menu-item .menu-right .menu-title {
   font-family: monospace;
-  font-size: 8.5rem;
+  font-size: 7.6rem;
   font-weight: 800;  /* giống kiểu in đậm trong hình */
   color: #ffffff;
   margin: 0;
@@ -684,8 +684,8 @@ html,body {
 @media (max-width: 1300px) {
 .overlay-box-side{
   position: absolute;
-  right: clamp(14px, 2.6vw, 49px);
-  bottom: clamp(10px, 1.8vw, 15px);
+  right: 38px;
+  bottom: -22px;
    /* chừa “safe area” để không đè viền trắng */
   padding: clamp(6px, .8vw, 10px) clamp(10px, 1.2vw, 16px);
 
@@ -700,7 +700,7 @@ html,body {
 .overlay-box-side .line4{
   color:#ff2a6c;
   font-weight: 800;
-  font-size: clamp(12px, 1.6vw, 22px);
+  font-size: 22px;
   line-height: 1.2;
   /* margin: 15px 60px; */
 }
@@ -751,14 +751,14 @@ html,body {
 .overlay-box-side .line4{
   color:#ff2a6c;
   font-weight: 800;
-  font-size: clamp(12px, 1.6vw, 22px);
+  font-size: 17px;
   line-height: 1.2;
   /* margin: 15px 60px; */
 }
 .overlay-box-side .line5{
   color:#ff2a6c;
   font-weight: 900;
-  font-size: clamp(28px, 4.2vw, 49px);
+  font-size: 43px;
   line-height: 1.3;
   letter-spacing: .02em; /* bám mép đẹp hơn */
   /* margin: 15px 30px; */
@@ -770,13 +770,13 @@ html,body {
 
 .overlay-box-side{
   position: absolute;
-  right: clamp(14px, 2.6vw, 49px);
-  bottom: clamp(10px, 1.8vw, 15px);
+  right: 50px;
+  bottom: -16px;
    /* chừa “safe area” để không đè viền trắng */
   padding: clamp(6px, .8vw, 10px) clamp(10px, 1.2vw, 16px);
 
   /* nghiêng cái hộp để song song cạnh banner */
-  transform: skewX(-15deg) translateX(-16px) translateY(-40px);
+  transform: skewX(-15deg) translateX(-19px) translateY(-44px);
   transform-origin: right bottom;
   text-align: right;
   color:#fff;
@@ -801,7 +801,7 @@ html,body {
     flex: 1;
     position: absolute;
     right: -17px;
-    bottom: -41px;
+    bottom: -30px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -811,7 +811,7 @@ html,body {
     max-width: 60%;
     }
   .top-page-menu .container-menu .menu-grid .menu-item .menu-right .menu-title {
-    font-size: 6.6rem;
+    font-size: 6.5rem;
   }
 
   .top-page-menu .container-menu .menu-grid .menu-item .menu-right .sub-title {
@@ -849,7 +849,7 @@ html,body {
   font-weight: 800;
   font-size: clamp(12px, 1.6vw, 22px);
   line-height: 1.2;
-  margin: 0px 25px;
+  /* margin: 0px 25px; */
 }
 .overlay-box-side .line5{
   color:#ff2a6c;
@@ -857,7 +857,7 @@ html,body {
   font-size: clamp(28px, 4.2vw, 49px);
   line-height: 1.3;
   letter-spacing: .02em; /* bám mép đẹp hơn */
-  margin: 0px 15px;
+  /* margin: 0px 15px; */
 }
 .overlay-box-side .line6{
   font-size: clamp(10px, 1.2vw, 16px);
@@ -866,8 +866,8 @@ html,body {
 
 .overlay-box-side{
   position: absolute;
-  right: clamp(14px, 2.6vw, 49px);
-  bottom: clamp(10px, 1.8vw, 15px);
+  right: 45px;
+  bottom: -15px;
    /* chừa “safe area” để không đè viền trắng */
   padding: clamp(6px, .8vw, 10px) clamp(10px, 1.2vw, 16px);
 
@@ -887,7 +887,7 @@ html,body {
   font-weight: 800;
   font-size: clamp(12px, 1.6vw, 22px);
   line-height: 1.2;
-  margin: 0px 34px;
+  /* margin: 0px 34px; */
 }
 .overlay-box-side .line5{
   color:#ff2a6c;
@@ -895,7 +895,7 @@ html,body {
   font-size: clamp(28px, 4.2vw, 49px);
   line-height: 1.3;
   letter-spacing: .02em; /* bám mép đẹp hơn */
-  margin: 0px 26px;
+  /* margin: 0px 26px; */
 }
 .overlay-box-side .line6{
   font-size: clamp(10px, 1.2vw, 16px);
@@ -904,8 +904,8 @@ html,body {
 
 .overlay-box-side{
   position: absolute;
-  right: clamp(14px, 2.6vw, 49px);
-  bottom: clamp(10px, 1.8vw, 15px);
+  right: 54px;
+  bottom: -19px;
    /* chừa “safe area” để không đè viền trắng */
   padding: clamp(6px, .8vw, 10px) clamp(10px, 1.2vw, 16px);
 
@@ -936,7 +936,7 @@ html,body {
     flex: 1;
     position: absolute;
     right: -14px;
-    bottom: -38px;
+    bottom: -30px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -957,7 +957,7 @@ html,body {
   font-weight: 800;
   font-size: 16px;
   line-height: 1.2;
-  margin: 5px 34px;
+  /* margin: 5px 34px; */
 }
 .overlay-box-side .line5{
   color:#ff2a6c;
@@ -965,18 +965,18 @@ html,body {
   font-size: 41px;
   line-height: 1.3;
   letter-spacing: .02em; /* bám mép đẹp hơn */
-  margin: 5px 26px;
+  /* margin: 5px 26px; */
 }
 .overlay-box-side .line6{
   font-size: 14px;
   line-height: 0;
-  margin: 2px 0px;
+  /* margin: 2px 0px; */
 }
 
 .overlay-box-side{
   position: absolute;
-  right: clamp(14px, 2.6vw, 49px);
-  bottom: clamp(10px, 1.8vw, 15px);
+  right: 49px;
+  bottom: -15px;
    /* chừa “safe area” để không đè viền trắng */
   padding: clamp(6px, .8vw, 10px) clamp(10px, 1.2vw, 16px);
 
@@ -1008,7 +1008,7 @@ html,body {
     flex: 1;
     position: absolute;
     right: 0;
-    bottom: -34px;
+    bottom: -27px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -1047,7 +1047,7 @@ html,body {
   }
   .news-grid {
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
   }
 
   .news-box, .news-side {
@@ -1067,23 +1067,23 @@ html,body {
     max-width: 700px;
     width: 100%;
     position: relative;
-    bottom: 25px;
+    bottom: -33px;
 }
    .top-page-menu .container-menu .menu-grid .menu-item .menu-right .menu-title {
     font-size: 4rem;
   }
 
   .top-page-menu .container-menu .menu-grid .menu-item .menu-right .sub-title {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
    .overlay-box .line1 {
-    font-size: 2.4rem;
+    font-size: 1.7rem;
     bottom: 17px;
   }
 
   .overlay-box .line2 {
-    font-size: 1.3rem;
-    bottom: -23px;
+    font-size: 1.0rem;
+    bottom: -18px;
   }
   
 }
@@ -1107,7 +1107,7 @@ html,body {
     flex: 1;
     position: absolute;
     right: 0;
-    bottom: -30px;
+    bottom: -27px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -1126,17 +1126,18 @@ html,body {
 
 
   .top-page-menu .container-menu .menu-grid .menu-item .menu-right .menu-title {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .top-page-menu .container-menu .menu-grid .menu-item .menu-right .sub-title {
     font-size: 0.6rem;
+    margin: 2px 0px;
   }
 
 
   .overlay-box .line1 {
-    font-size: 1.6rem;
-        bottom: 12px;
+    font-size: 1.5rem;
+    bottom: 12px;
   }
 
   .overlay-box .line2 {
@@ -1166,8 +1167,8 @@ html,body {
 
 .overlay-box-side{
   position: absolute;
-  right: clamp(14px, 2.6vw, 49px);
-  bottom: clamp(10px, 1.8vw, 15px);
+  right: 55px;
+  bottom: -11px;
    /* chừa “safe area” để không đè viền trắng */
   padding: clamp(6px, .8vw, 10px) clamp(10px, 1.2vw, 16px);
 
@@ -1212,8 +1213,8 @@ html,body {
 
 .overlay-box-side{
   position: absolute;
-  right: clamp(14px, 2.6vw, 49px);
-  bottom: clamp(10px, 1.8vw, 15px);
+  right: 26px;
+  bottom: -22px;
   padding: clamp(6px, .8vw, 10px) clamp(10px, 1.2vw, 16px);
   transform: skewX(-15deg) translateY(-71px) translateX(-86px);
   transform-origin: right bottom;
@@ -1250,8 +1251,8 @@ html,body {
 
 .overlay-box-side{
   position: absolute;
-  right: clamp(14px, 2.6vw, 49px);
-  bottom: clamp(10px, 1.8vw, 15px);
+  right: 16px;
+  bottom: -34px;
   padding: clamp(6px, .8vw, 10px) clamp(10px, 1.2vw, 16px);
   transform: skewX(-15deg) translateY(-73px) translateX(-86px);
   transform-origin: right bottom;
@@ -1271,8 +1272,8 @@ html,body {
   }
 
   .overlay-box .line1 {
-    font-size: 1.5rem; 
-        bottom: 2px;
+    font-size: 1.2rem;
+    bottom: 2px;
   }
 
   .overlay-box .line2 {
@@ -1297,7 +1298,7 @@ html,body {
     flex: 1;
     position: absolute;
     right: -25px;
-    bottom: -30px;
+    bottom: -26px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -1307,11 +1308,12 @@ html,body {
     max-width: 60%;
     }
   .top-page-menu .container-menu .menu-grid .menu-item .menu-right .menu-title {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 
   .top-page-menu .container-menu .menu-grid .menu-item .menu-right .sub-title {
     font-size: 0.4rem;
+    margin: 4px 0px;
   }
 
   .overlay-box-side .line4{
@@ -1337,8 +1339,8 @@ html,body {
 
 .overlay-box-side{
   position: absolute;
-  right: clamp(14px, 2.6vw, 49px);
-  bottom: clamp(10px, 1.8vw, 15px);
+  right: 26px;
+  bottom: -20px;
    /* chừa “safe area” để không đè viền trắng */
   padding: clamp(6px, .8vw, 10px) clamp(10px, 1.2vw, 16px);
 
@@ -1358,7 +1360,7 @@ html,body {
   font-weight: 800;
   font-size: 23px;
   line-height: 1.2;
-  margin: 0px -18px;
+  /* margin: 0px -18px; */
 }
 .overlay-box-side .line5{
   color:#ff2a6c;
@@ -1366,23 +1368,23 @@ html,body {
   font-size: 51px;
   line-height: 1.3;
   letter-spacing: .02em; /* bám mép đẹp hơn */
-  margin: 0px 10px;
+  /* margin: 0px 10px; */
 }
 .overlay-box-side .line6{
   font-size: 14px;
   line-height: 0;
-  margin: 0px -40px;
+  /* margin: 0px -40px; */
 }
 
 .overlay-box-side{
   position: absolute;
-  right: clamp(14px, 2.6vw, 49px);
-  bottom: clamp(10px, 1.8vw, 15px);
+  right: 34px;
+  bottom: -23px;
    /* chừa “safe area” để không đè viền trắng */
   padding: clamp(6px, .8vw, 10px) clamp(10px, 1.2vw, 16px);
 
   /* nghiêng cái hộp để song song cạnh banner */
-  transform: skewX(-15deg) translateY(-55px) translateX(-54px);
+  transform: skewX(-15deg) translateY(-55px) translateX(-41px);
   transform-origin: right bottom;
   text-align: right;
   color:#fff;
@@ -1415,8 +1417,8 @@ html,body {
 
 .overlay-box-side{
   position: absolute;
-  right: clamp(14px, 2.6vw, 49px);
-  bottom: clamp(10px, 1.8vw, 15px);
+  right: 29px;
+  bottom: -18px;
    /* chừa “safe area” để không đè viền trắng */
   padding: clamp(6px, .8vw, 10px) clamp(10px, 1.2vw, 16px);
 
@@ -1454,13 +1456,13 @@ html,body {
 
 .overlay-box-side{
   position: absolute;
-  right: clamp(14px, 2.6vw, 49px);
-  bottom: clamp(10px, 1.8vw, 15px);
+  right: 29px;
+  bottom: -21px;
    /* chừa “safe area” để không đè viền trắng */
   padding: clamp(6px, .8vw, 10px) clamp(10px, 1.2vw, 16px);
 
   /* nghiêng cái hộp để song song cạnh banner */
-  transform: skewX(-15deg) translateY(-50px) translateX(-66px);
+  transform: skewX(-15deg) translateY(-50px) translateX(-49px);
   transform-origin: right bottom;
   text-align: right;
   color:#fff;
@@ -1479,7 +1481,7 @@ html,body {
   }
 
 .overlay-box .line1 {
-  font-size: 1.4rem;
+  font-size: 0.9rem;
 }
 
 .overlay-box .line2 {
@@ -1503,7 +1505,7 @@ html,body {
   flex: 1;
   position: absolute;
   right: -6px;
-  bottom: -16px;
+  bottom: -15px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1513,12 +1515,12 @@ html,body {
   max-width: 60%;
   }
   .top-page-menu .container-menu .menu-grid .menu-item .menu-right .menu-title {
-  font-size: 1.5rem;
-
+  font-size: 1.1rem;
 }
 
   .top-page-menu .container-menu .menu-grid .menu-item .menu-right .sub-title {
     font-size: 0.3rem;
+    margin: 5px 0px;
   }
 
   .overlay-box-side .line4{
@@ -1526,7 +1528,7 @@ html,body {
   font-weight: 800;
   font-size: 15px;
   line-height: 1.2;
-  margin: 5px 34px;
+  margin: 5px 15px;
 }
 .overlay-box-side .line5{
   color:#ff2a6c;
@@ -1534,7 +1536,7 @@ html,body {
   font-size: 40px;
   line-height: 1.3;
   letter-spacing: .02em; /* bám mép đẹp hơn */
-  margin: 5px 26px;
+  margin: 5px 0px;
 }
 .overlay-box-side .line6{
   font-size: 14px;
@@ -1544,8 +1546,8 @@ html,body {
 
 .overlay-box-side{
   position: absolute;
-  right: clamp(14px, 2.6vw, 49px);
-  bottom: clamp(10px, 1.8vw, 15px);
+  right: 65px;
+  bottom: -16px;
    /* chừa “safe area” để không đè viền trắng */
   padding: clamp(6px, .8vw, 10px) clamp(10px, 1.2vw, 16px);
 
@@ -1583,8 +1585,8 @@ html,body {
 
 .overlay-box-side{
   position: absolute;
-  right: clamp(14px, 2.6vw, 49px);
-  bottom: clamp(10px, 1.8vw, 15px);
+  right: 51px;
+  bottom: -18px;
    /* chừa “safe area” để không đè viền trắng */
   padding: clamp(6px, .8vw, 10px) clamp(10px, 1.2vw, 16px);
 
@@ -1603,14 +1605,14 @@ html,body {
 .overlay-box-side .line4{
   color:#ff2a6c;
   font-weight: 800;
-  font-size: 10px;
+  font-size: 13px;
   /* line-height: 1.2; */
   /* margin: 5px 34px; */
 }
 .overlay-box-side .line5{
   color:#ff2a6c;
   font-weight: 900;
-  font-size: 29px;
+  font-size: 34px;
   /* line-height: 1.3; */
   letter-spacing: .02em; /* bám mép đẹp hơn */
   /* margin: 5px 26px; */
@@ -1623,8 +1625,8 @@ html,body {
 
 .overlay-box-side{
   position: absolute;
-  right: clamp(14px, 2.6vw, 49px);
-  bottom: clamp(10px, 1.8vw, 15px);
+  right: 22px;
+  bottom: -19px;
    /* chừa “safe area” để không đè viền trắng */
   padding: clamp(6px, .8vw, 10px) clamp(10px, 1.2vw, 16px);
 
@@ -1644,28 +1646,28 @@ html,body {
 .overlay-box-side .line4{
   color:#ff2a6c;
   font-weight: 800;
-  font-size: 9px;
+  font-size: 12px;
   /* line-height: 1.2; */
-  /* margin: 5px 34px; */
+  margin: 5px 0px;
 }
 .overlay-box-side .line5{
   color:#ff2a6c;
   font-weight: 900;
-  font-size: 25px;
+  font-size: 32px;
   /* line-height: 1.3; */
   letter-spacing: .02em; /* bám mép đẹp hơn */
-  /* margin: 5px 26px; */
+  margin: 5px 0px;
 }
 .overlay-box-side .line6{
-  font-size: 10px;
+  font-size: 11px;
   line-height: 0;
-  /* margin: 2px 0px; */
+  margin: 2px 0px;
 }
 
 .overlay-box-side{
   position: absolute;
-  right: clamp(14px, 2.6vw, 49px);
-  bottom: clamp(10px, 1.8vw, 15px);
+  right: 29px;
+  bottom: -22px;
    /* chừa “safe area” để không đè viền trắng */
   padding: clamp(6px, .8vw, 10px) clamp(10px, 1.2vw, 16px);
 
@@ -1685,23 +1687,23 @@ html,body {
 .overlay-box-side .line4{
   color:#ff2a6c;
   font-weight: 800;
-  font-size: 5px;
+  font-size: 11px;
 }
 .overlay-box-side .line5{
   color:#ff2a6c;
   font-weight: 900;
-  font-size: 18px;
+  font-size: 27px;
   letter-spacing: .02em;
 }
 .overlay-box-side .line6{
-  font-size: 8px;
+  font-size: 11px;
   line-height: 0;
 }
 
 .overlay-box-side{
   position: absolute;
-  right: clamp(14px, 2.6vw, 49px);
-  bottom: clamp(10px, 1.8vw, 15px);
+  right: 29px;
+  bottom: -21px;
   padding: clamp(6px, .8vw, 10px) clamp(10px, 1.2vw, 16px);
   transform: skewX(-15deg) translateX(-10px) translateY(-27px);
   transform-origin: right bottom;
