@@ -27,7 +27,7 @@ get_header(); ?>
             <!-- Bên phải: SERVICE + 事業内容 -->
             <div class="about-right-text">
                 <span class="company-info"><?php the_field('service_page_description') ?></span>
-                <h1 class="about-heading"><?php the_title() ?></h1>
+                <h1 class="about-heading text-uppercase"><?php the_title() ?></h1>
             </div>
         </div>
     </div>
