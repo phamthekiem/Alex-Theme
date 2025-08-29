@@ -16,7 +16,7 @@
 
 <div id="page" class="site">
 
-	<header id="masthead" <?php header_class();?> role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+	<header id="masthead" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 
 		<div class="header-main">
 			<div class="container">
