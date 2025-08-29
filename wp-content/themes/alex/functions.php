@@ -118,6 +118,7 @@ require get_template_directory() . '/inc/class-tgm-plugin-activation.php';
 
 // Load Shortcode
 require get_template_directory() . '/inc/shortcode/shortcode-blog.php';
+// require get_template_directory() . '/inc/shortcode/form-contact.php';
 
 
 // Add Shortcode
@@ -221,16 +222,16 @@ function custom_filter_wpcf7_is_tel($result, $tel) {
 
 
 // SMTP
-// add_action( 'phpmailer_init', function( $phpmailer ) {
-//     if ( !is_object( $phpmailer ) )
-//     $phpmailer = (object) $phpmailer;
-//     $phpmailer->Mailer     = 'smtp';
-//     $phpmailer->Host       = 'smtp.gmail.com';
-//     $phpmailer->SMTPAuth   = 1;
-//     $phpmailer->Port       = 587;
-//     $phpmailer->Username   = 'phamthekiem193@gmail.com';
-//     $phpmailer->Password   = 'wjekertxpwdjchda';
-//     $phpmailer->SMTPSecure = 'TLS';
-//     $phpmailer->From       = 'phamthekiem193@gmail.com';
-//     $phpmailer->FromName   = 'Lotto - ';
-// });
+add_action( 'phpmailer_init', function( $phpmailer ) {
+    if ( !is_object( $phpmailer ) )
+    $phpmailer = (object) $phpmailer;
+    $phpmailer->Mailer     = 'smtp';
+    $phpmailer->Host       = 'smtp.gmail.com';
+    $phpmailer->SMTPAuth   = 1;
+    $phpmailer->Port       = 587;
+    $phpmailer->Username   = 'phamthekiem193@gmail.com';
+    $phpmailer->Password   = 'wjekertxpwdjchda';
+    $phpmailer->SMTPSecure = 'TLS';
+    $phpmailer->From       = 'phamthekiem193@gmail.com';
+    $phpmailer->FromName   = 'Alex - HP';
+});
