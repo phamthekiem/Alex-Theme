@@ -118,7 +118,6 @@
   margin-top: -9px;
 }
 
-/* Gradient overlay để khi hover mượt hơn */
 .works-image-link::before {
   content: "";
   position: absolute;
