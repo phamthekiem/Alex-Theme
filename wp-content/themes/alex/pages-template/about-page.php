@@ -193,7 +193,7 @@ get_header(); ?>
     </div>
     <div class="container">
         <h2 class="section-title"><?php the_field('major_clients_title') ?></h2>
-        <div class="route-block-wrapper">
+        <div class="route-blender-wrapper">
             
         </div>
     </div>
