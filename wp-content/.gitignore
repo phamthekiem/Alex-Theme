@@ -3,6 +3,7 @@ wp-admin/
 wp-includes/
 license.txt
 readme.html
+wp-config.php
 
 # Ignore uploads & cache
 wp-content/uploads/

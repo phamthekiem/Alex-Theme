@@ -20,16 +20,20 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'qaaapeac_wp472' );
+
+define( 'WP_HOME', 'https://alex.dragoon.vn' ); 
+define( 'WP_SITEURL', 'https://alex.dragoon.vn' );
+
+define( 'DB_NAME', 'wpdb_wordpress' );
 
 /** Database username */
-define( 'DB_USER', 'qaaapeac_wp472' );
+define( 'DB_USER', 'wpuser' );
 
 /** Database password */
-define( 'DB_PASSWORD', ')S7.g4-@2[iH8p!s6!9u' );
+define( 'DB_PASSWORD', 'wp@123' );
 
 /** Database hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', 'db' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
