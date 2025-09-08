@@ -1,107 +1,95 @@
-jQuery(document).ready(function($) {
-    // ===== Menu toggle mobile =====
-    // var menuToggle = $("#menuToggle");
-    // var mobileNav = $("#mobileNav");
+// ./js/top-news-scroll.js
+(function () {
+  if (window.PAGE !== 'top') return;
 
-    // menuToggle.on("click", function() {
-    //     mobileNav.toggleClass("show");
+  function init() {
+    const list = document.getElementById('newsList');
+    if (!list) return;
 
-    //     // Đổi icon giữa ☰ và ✕
-    //     if (mobileNav.hasClass("show")) {
-    //         menuToggle.html('&times;'); // ✕
-    //     } else {
-    //         menuToggle.html('&#9776;'); // ☰
-    //     }
-    // });
+    // phần nút trong cùng wrapper để không ảnh hưởng nơi khác
+    const wrapper = list.closest('.news-scroll-wrapper') || document;
+    const upBtn   = wrapper.querySelector('.scroll-btn.up');
+    const downBtn = wrapper.querySelector('.scroll-btn.down');
 
-    // // ===== Submenu accordion =====
-    // $(".mobile-toggle").on("click", function() {
-    //     var button = $(this);
-    //     var parent = button.closest(".mobile-nav-item");
-    //     var submenu = parent.find(".mobile-submenu");
-    //     var icon = button.find(".toggle-icon");
+    // gỡ onclick inline nếu có
+    [upBtn, downBtn].forEach(b => b && b.removeAttribute('onclick'));
 
-    //     // Close all other submenus
-    //     $(".mobile-nav-item").not(parent).each(function() {
-    //         $(this).removeClass("open").find(".mobile-submenu").removeClass("show");
-    //         $(this).find(".toggle-icon").text("＋");
-    //     });
+    list.style.overflowY = 'hidden';
 
-    //     // Toggle current submenu
-    //     if (parent.hasClass("open")) {
-    //         parent.removeClass("open");
-    //         submenu.removeClass("show");
-    //         icon.text("＋");
-    //     } else {
-    //         parent.addClass("open");
-    //         submenu.addClass("show");
-    //         icon.text("−");
-    //     }
-    // });
+    let items = [];
+    let tops  = [];
+    const COUNT = 2; // cửa sổ luôn thấy 2 item, bước nhảy = 1
 
-    // ===== Scrollable news list =====
-    var list = $("#newsList");
-    if (list.length) {
-        list.css("overflow-y", "hidden");
+    function measure() {
+      items = Array.from(list.querySelectorAll('.news-item'));
+      tops  = items.map(el => el.offsetTop);
 
-        var items = [];
-        var tops = [];
-        var COUNT = 2;
-
-        function measure() {
-            items = list.find(".news-item").toArray();
-            tops = items.map(function(el){ return $(el).position().top; });
-
-            // chiều cao viewport = tổng 2 item đầu
-            if (items.length >= 2) {
-                var h = $(items[0]).outerHeight(true) + $(items[1]).outerHeight(true);
-                list.css("max-height", h + "px");
-            }
-            updateButtons();
-        }
-
-        function headIndex() {
-            var st = list.scrollTop();
-            var l = 0, r = tops.length - 1, ans = 0;
-            while(l <= r) {
-                var m = (l + r) >> 1;
-                if(tops[m] <= st + 1){ ans = m; l = m + 1; }
-                else r = m - 1;
-            }
-            return ans;
-        }
-
-        function scrollToHead(i, smooth = true) {
-            if (!tops.length) return;
-            var maxHead = Math.max(0, items.length - COUNT);
-            i = Math.max(0, Math.min(i, maxHead));
-            list.stop().animate({scrollTop: tops[i]}, smooth ? 400 : 0);
-            setTimeout(updateButtons, 200);
-        }
-
-        // API cho nút ▲ / ▼
-        window.scrollNews = function(dir) {
-            var i = headIndex();
-            scrollToHead(i + (dir > 0 ? 1 : -1), true);
-        };
-
-        function updateButtons() {
-            var upBtn = $(".scroll-btn.up");
-            var downBtn = $(".scroll-btn.down");
-            if (!upBtn.length || !downBtn.length) return;
-            var i = headIndex();
-            var maxHead = Math.max(0, items.length - COUNT);
-            upBtn.prop("disabled", i <= 0);
-            downBtn.prop("disabled", i >= maxHead);
-        }
-
-        list.on("scroll", function(){ updateButtons(); });
-        var rt = null;
-        $(window).on("resize", function(){
-            clearTimeout(rt);
-            rt = setTimeout(measure, 120);
-        });
-
-        measure();
+      // đặt chiều cao viewport = tổng chiều cao 2 item đầu
+      if (items.length >= 2) {
+        const h = items[0].offsetHeight + items[1].offsetHeight;
+        list.style.maxHeight = h + 'px';
+      } else if (items.length === 1) {
+        list.style.maxHeight = items[0].offsetHeight + 'px';
+      }
+      updateButtons();
     }
-});
+
+    // tìm index item ở đỉnh cửa sổ (gần nhất với scrollTop)
+    function headIndex() {
+      const st = list.scrollTop;
+      let l = 0, r = tops.length - 1, ans = 0;
+      while (l <= r) {
+        const m = (l + r) >> 1;
+        if (tops[m] <= st + 1) { ans = m; l = m + 1; }
+        else r = m - 1;
+      }
+      return ans;
+    }
+
+    // cuộn sao cho item index i nằm ở đỉnh
+    function scrollToHead(i, smooth = true) {
+      if (!tops.length) return;
+      const maxHead = Math.max(0, items.length - COUNT);
+      i = Math.max(0, Math.min(i, maxHead));
+      list.scrollTo({ top: tops[i], behavior: smooth ? 'smooth' : 'auto' });
+      setTimeout(updateButtons, 200);
+    }
+
+    // cập nhật trạng thái nút khi chạm biên
+    function updateButtons() {
+      if (!upBtn || !downBtn) return;
+      const i = headIndex();
+      const maxHead = Math.max(0, items.length - COUNT);
+      upBtn.disabled   = (i <= 0);
+      downBtn.disabled = (i >= maxHead);
+    }
+
+    // gán sự kiện cho nút ▲ / ▼ (dịch đúng 1 item)
+    upBtn  && upBtn.addEventListener('click',  () => scrollToHead(headIndex() - 1, true));
+    downBtn&& downBtn.addEventListener('click',() => scrollToHead(headIndex() + 1, true));
+
+    // cập nhật nút khi người dùng tự cuộn
+    list.addEventListener('scroll', updateButtons, { passive: true });
+
+    // re-measure khi resize (debounce)
+    let rt = null;
+    window.addEventListener('resize', () => {
+      clearTimeout(rt);
+      rt = setTimeout(measure, 120);
+    });
+
+    // nếu trong danh sách có ảnh load chậm, đo lại sau khi ảnh tải
+    const imgs = list.querySelectorAll('img');
+    imgs.forEach(img => {
+      if (!img.complete) img.addEventListener('load', measure, { once: true });
+    });
+
+    measure();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();

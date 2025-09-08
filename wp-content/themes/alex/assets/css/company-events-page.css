@@ -192,51 +192,70 @@
   white-space: nowrap;
 }
 
-.interview-overwhole-wrapper {
+.interview-overwhole-wrapper{
   position: relative;
   width: 100%;
   max-width: 900px;
-  overflow: hidden;
-  display: flex;
+  margin: 12px 0;
+  overflow: hidden;                 /* che phần tràn */
 }
 
-.interview-overwhole {
+.interview-overwhole{
+  --gap: 16px;                      /* khoảng cách giữa item */
+  --items: 3;                       /* số item trên 1 khung ở desktop */
   display: flex;
-  transition: transform 0.4s ease-in-out;
-  gap: 15px;
-  /* padding: 40px; */
+  gap: var(--gap);
+  overflow-x: auto;                 /* cho phép kéo ngang khi mobile */
+  scroll-snap-type: x mandatory;    /* bắt dính từng item */
+  -webkit-overflow-scrolling: touch;
+  padding: 4px;                     /* đỡ cấn viền khi snap */
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 4px; /* snap mượt ở hai mép */
 }
+.interview-overwhole::-webkit-scrollbar{ display:none; } /* ẩn scrollbar WebKit */
 
-.overwhole-item {
-  flex: 0 0 252px;
+.overwhole-item{
+  flex: 0 0 calc((100% - (var(--items) - 1) * var(--gap)) / var(--items));
+  scroll-snap-align: start;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+  background: #f0f0f0;
+  transition: transform .25s ease;
 }
-
-.overwhole-item img {
-  display: block;
+.overwhole-item:hover{ transform: translateY(-2px); }
+.overwhole-item:last-child{
+  scroll-snap-align: end;    /* chốt cuối không còn khoảng trắng */
+}
+.overwhole-item img{
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;                 /* ảnh luôn đầy khung, không méo */
+  display: block;
 }
-
 
 /* Nút điều hướng */
-.overwhole-btn {
-  background: transparent;
-  border: none;
-  color: #111;
-  font-size: 40px;
-  cursor: pointer;
+.overwhole-btn{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 10;
-  padding: 8px 12px;
+  z-index: 5;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(231,226,226,.9);
+  color: #111;
+  font-size: 22px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
 }
+.overwhole-btn.prev{ left: 4px; }
+.overwhole-btn.next{ right: 4px; }
+.overwhole-btn[disabled]{ opacity:.35; pointer-events:none; }
 
-.overwhole-btn.prev { left: 0; }
-.overwhole-btn.next { right: 0; }
 
 
 /* Ảnh lớn khi đổi sẽ fade */
@@ -250,73 +269,7 @@
 }
 /* ========== Responsive ========== */
 
-@media (max-width: 1440px) {
-  .overwhole-item {
-  flex: 0 0 251px;
-  }
-.overwhole-item img {
-    display: block;
-    width: 84%;
-    height: auto;
-}
-.interview-overwhole {
-    display: flex;
-    transition: transform 0.4s ease-in-out;
-    /* gap: 15px; */
-    /* padding: 40px; */
-}
-}
 
-@media (max-width: 1396px) {
-  .overwhole-item {
-  flex: 0 0 239px;
-  }
-.overwhole-item img {
-    display: block;
-    width: 80%;
-    height: auto;
-}
-.interview-overwhole {
-    display: flex;
-    transition: transform 0.4s ease-in-out;
-    /* gap: 13px; */
-    /* padding: 40px; */
-}
-}
-
-@media (max-width: 1359px) {
-  .overwhole-item {
-  flex: 0 0 239px;
-  }
-.overwhole-item img {
-    display: block;
-    width: 80%;
-    height: auto;
-}
-.interview-overwhole {
-    display: flex;
-    transition: transform 0.4s ease-in-out;
-    /* gap: 13px; */
-    /* padding: 40px; */
-}
-}
-
-@media (max-width: 1339px) {
-.overwhole-item {
-    flex: 0 0 239px;
-}
-.overwhole-item img {
-    display: block;
-    width: 80%;
-    height: auto;
-}
-.interview-overwhole {
-    display: flex;
-    transition: transform 0.4s ease-in-out;
-    /* gap: 13px; */
-    /* padding: 40px; */
-}
-}
 @media (max-width: 1280px) {
   .creation-interview-title {
       font-size: 25px;
@@ -333,6 +286,7 @@
 
 /* 1024px */
 @media (max-width: 1024px) {
+    .interview-overwhole{ --items: 2; }
   .interview-header {
     height: 200px;
   }
@@ -366,27 +320,6 @@
   .overwhole-caption {
     font-size: 32px;
     bottom: 8px;
-  }
-
-  .overwhole-btn {
-    font-size: 26px;
-    padding: 6px 10px;
-  }
-
-  .overwhole-item {
-    flex: 0 0 235px;
-    min-width: 200px;
-  }
-  .overwhole-item img {
-      display: block;
-      width: 80%;
-      height: auto;
-  }
-  .interview-overwhole {
-      display: flex;
-      transition: transform 0.4s ease-in-out;
-      /* gap: 13px; */
-      /* padding: 40px; */
   }
 }
 
@@ -423,26 +356,10 @@
   .interview-detail-btn {
     font-size: 16px;
   }
-  .overwhole-item {
-    flex: 0 0 224px;
-    min-width: 200px;
-  }
-  .overwhole-item img {
-      display: block;
-      width: 74%;
-      height: auto;
-  }
-  .interview-overwhole {
-      display: flex;
-      transition: transform 0.4s ease-in-out;
-      /* gap: 13px; */
-      /* padding: 40px; */
-  }
-}
-
-@media (max-width: 900px) {
 
 }
+
+
 @media (max-width: 768px) {
   .interview-header {
     height: 160px;
@@ -520,41 +437,15 @@
     top: -1px;
     left: -16px;
   }
-
-   .interview-overwhole-wrapper {
-    gap: 5px;
-  }
-
-  .overwhole-item {
-    min-width: 160px;
-  }
-
   .overwhole-caption {
     font-size: 24px;
     bottom: 6px;
   }
 
-  .overwhole-btn {
-    font-size: 22px;
-    padding: 4px 8px;
-  }
-
-    .overwhole-item {
-    flex: 0 0 241px;
-    min-width: 160px;
-  }
-  .overwhole-item img {
-      display: block;
-      width: 74%;
-      height: auto;
-  }
-  .interview-overwhole {
-      display: flex;
-      transition: transform 0.4s ease-in-out;
-      /* gap: 13px; */
-      /* padding: 40px; */
-  }
-
+}
+@media (max-width:640px){
+  .interview-overwhole{ --items: 1; --gap: 12px; }
+  .overwhole-btn{ width: 36px; height: 36px; font-size: 18px; }
 }
 /* 600px */
 @media (max-width: 600px) {
@@ -577,21 +468,6 @@
     font-size: 13px;
   }
 
-      .overwhole-item {
-    flex: 0 0 241px;
-    min-width: 160px;
-  }
-  .overwhole-item img {
-      display: block;
-      width: 72%;
-      height: auto;
-  }
-  .interview-overwhole {
-      display: flex;
-      transition: transform 0.4s ease-in-out;
-      /* gap: 13px; */
-      /* padding: 40px; */
-  }
 }
 
 @media (max-width: 480px) {
@@ -621,20 +497,6 @@
     margin-bottom: 40px;
   }
 
-  .overwhole-item {
-    min-width: 120px;
-    border: 1px solid #000;
-  }
-
-  .overwhole-caption {
-    font-size: 18px;
-    bottom: 4px;
-  }
-
-  .overwhole-btn {
-    font-size: 18px;
-    padding: 2px 6px;
-  }
 }
 /* 360px */
 @media (max-width: 360px) {

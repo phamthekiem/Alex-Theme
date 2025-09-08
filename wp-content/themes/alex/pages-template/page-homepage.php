@@ -10,7 +10,7 @@
 
 get_header(); ?>
 
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/top-page.css">
+<!-- <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/top-page.css"> -->
 	<!-- Banner -->
 	<section class="hero">
 		<div class="hero-bg" style="background-image: url('<?php the_field('home_banner_image') ?>')"></div>

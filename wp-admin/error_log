@@ -4,3 +4,4 @@
 [15-Aug-2025 07:34:20 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/qaaapeac/alex.caromed.vn/wp-content/themes/alex/inc/functions/custom-plugin.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/qaaapeac/alex.caromed.vn/wp-content/themes/alex/functions.php on line 69
 [15-Aug-2025 07:34:20 UTC] PHP Warning:  require_once(/home/qaaapeac/alex.caromed.vn/wp-content/themes/alex/inc/functions/custom-plugin.php): failed to open stream: No such file or directory in /home/qaaapeac/alex.caromed.vn/wp-content/themes/alex/functions.php on line 69
 [15-Aug-2025 07:34:20 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/qaaapeac/alex.caromed.vn/wp-content/themes/alex/inc/functions/custom-plugin.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/qaaapeac/alex.caromed.vn/wp-content/themes/alex/functions.php on line 69
+[06-Sep-2025 08:40:15 UTC] Contact form submitted: Phạm Thế Kiểm - phamthekiem3@gmail.com

@@ -23,6 +23,62 @@
 	background:url(../image/base/second_bg.png) no-repeat right 0;
 } */
 
+.contact-detail-btn{
+	position: relative;
+    max-width: 240px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 32px;
+    color: #111;
+    border: 2px solid #006c4b;
+    background: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: auto;
+    align-self: flex-end;
+    text-align: center;
+}
+.confirm-detail-btn{
+	position: relative;
+    max-width: 240px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 32px;
+    color: #111;
+    border: 2px solid #006c4b;
+    background: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: auto;
+    align-self: flex-end;
+    text-align: center;
+}
+.contact-detail-btn::before {
+    position: absolute;
+    content: '';
+    background-image: url('../image/長方形 572.png');
+    background-size: 50% auto;
+    background-repeat: no-repeat;
+    z-index: 3;
+    width: 30px;
+    height: 30px;
+    bottom: -12px;
+    right: -12px;
+}
+.confirm-detail-btn::before {
+    position: absolute;
+    content: '';
+    background-image: url('../image/長方形 572.png');
+    background-size: 50% auto;
+    background-repeat: no-repeat;
+    z-index: 3;
+    width: 30px;
+    height: 30px;
+    bottom: -12px;
+    right: -12px;
+}
 #main_contents p {
     margin-bottom: 10px;
     line-height: 1.75;
@@ -229,7 +285,7 @@ textarea {
 .h_back{
 	display:block;
 	cursor:pointer;
-	margin:0 auto;
+	/* margin:0 auto; */
 }
 /* confirm_table */
 #form_box table.confirm_table{

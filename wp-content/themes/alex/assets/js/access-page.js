@@ -1,28 +1,57 @@
-jQuery(document).ready(function($) {
-    $(document).on('click', '.arrow-icon', function(e) {
-        var icon = $(this);
-        var section = icon.closest('section.recruit-heading');
-        if (!section.length) return;
+document.addEventListener("click", function (e) {
+  const btn = e.target.closest(".arrow-icon");
+  if (!btn) return;
 
-        var wrapper = section.find('.building-video .video-wrapper');
-        if (!wrapper.length) return;
+  const section = btn.closest("section.recruit-heading");
+  if (!section) return;
 
-        var img = wrapper.find('.default-building-img');
-        var iframe = wrapper.find('iframe');
-        if (!iframe.length || !img.length) return;
+  const wrapper = section.querySelector(".building-video .video-wrapper");
+  if (!wrapper) return;
 
-        var videoId = icon.data('video');
-        if (!videoId) return;
+  const defaultImg = wrapper.querySelector(".default-building-img");
+  const iframes = wrapper.querySelectorAll("iframe");
+  if (!iframes.length) return;
 
-        var start = parseInt(icon.data('start') || 0, 10);
-        var url = "https://www.youtube.com/embed/" + videoId + "?rel=0&autoplay=1" + (start ? "&start=" + start : "");
+  // Lấy video theo index
+  const index = parseInt(btn.dataset.index || "-1", 10);
+  if (index < 0 || index >= iframes.length) return;
 
-        // Ẩn ảnh, hiện video
-        img.hide();
-        iframe.show();
+  const target = iframes[index];
 
-        if (iframe.attr('src') !== url) {
-            iframe.attr('src', url);
-        }
-    });
+  // Ẩn ảnh mặc định
+  if (defaultImg) defaultImg.style.display = "none";
+
+  // Dừng và ẩn các video khác
+  iframes.forEach((f, i) => {
+    if (i === index) return;
+    try {
+      f.contentWindow?.postMessage(
+        JSON.stringify({ event: "command", func: "stopVideo", args: [] }),
+        "*"
+      );
+    } catch {}
+    f.style.display = "none";
+  });
+
+  // Hiện video mục tiêu
+  target.style.display = "block";
+
+  // Tua đến thời điểm chỉ định
+  const start = parseInt(btn.dataset.start || "0", 10);
+  if (start > 0) {
+    try {
+      target.contentWindow?.postMessage(
+        JSON.stringify({ event: "command", func: "seekTo", args: [start, true] }),
+        "*"
+      );
+    } catch {}
+  }
+
+  // Auto play
+  try {
+    target.contentWindow?.postMessage(
+      JSON.stringify({ event: "command", func: "playVideo", args: [] }),
+      "*"
+    );
+  } catch {}
 });

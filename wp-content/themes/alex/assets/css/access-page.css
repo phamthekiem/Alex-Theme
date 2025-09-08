@@ -24,14 +24,13 @@
   bottom:25px
 }
 .footer-classic-gmap {
-    position: relative !important;
-    left: 0 !important;
-    padding: 0;
-    top: 26px;
-    right: 0;
-    bottom: 26px;
-    border: 4px solid #0e380e;
-
+  position: relative !important;
+  left: 0 !important;
+  padding: 0;
+  top: 26px;
+  right: 0;
+  bottom: 26px;
+  border: 4px solid #0e380e;
 }
 .footer-classic-gmap .google-map-container {
   height: 500px;
@@ -42,7 +41,7 @@
   height: 100%;
   border: 0;
 }
-/* Bố cục địa chỉ + ảnh */
+
 .address-wrapper {
   display: flex;
   align-items: flex-start;
@@ -80,19 +79,19 @@
 
 .station-list {
   display: grid;
-  row-gap: 8px; /* khoảng cách giữa các dòng */
+  row-gap: 8px;
 }
 
 .station-item {
   display: grid;
-  grid-template-columns: 170px 120px 90px 25px; /* cột cố định */
+  grid-template-columns: 170px 120px 90px 25px; 
   align-items: center;
   column-gap: 8px;
 }
 
 .station-item-001 {
   display: grid;
-  grid-template-columns: 170px 120px 90px 25px; /* cột cố định */
+  grid-template-columns: 170px 120px 90px 25px; 
   align-items: center;
   column-gap: 8px;
 }
@@ -145,13 +144,13 @@
   font-weight: bold;
 }
 
-/* ====== Khung video thay ảnh tòa nhà ====== */
+
 .building-video {
     width: 100%;
     height: auto;
     position: relative;
     overflow: hidden;
-    flex: 0 0 600px;        /* giữ layout giống .building-image */
+    flex: 0 0 600px;   
 }
 .default-building-img {
   position: absolute;
@@ -165,7 +164,7 @@
 .video-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 56.25%;     /* 16:9 */
+  padding-top: 56.25%;    
   border-radius: 6px;
   overflow: hidden;
   background: #000;
@@ -174,7 +173,7 @@
 .video-wrapper-001 {
   position: relative;
   width: 100%;
-  padding-top: 80.25%;     /* 16:9 */
+  padding-top: 80.25%;    
   border-radius: 6px;
   overflow: hidden;
   background: #000;

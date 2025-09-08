@@ -70,7 +70,7 @@
 }
 
 .staff-image-reverse-bg {
-  /* max-width: 100%; */
+  max-width: 100%;
   width: 100%;
   position: relative;
 }
@@ -91,12 +91,14 @@
 .staff-frame-bg {
   position: relative;
   width: 100%;
-  max-width: 340px;
+  max-width: 405px;
   height: auto;
   object-fit: cover;
   z-index: 4;
   top: 0;
   left: 0;
+  height: 650px;
+  clip-path: polygon(0% 9%, 84% 0%, 84% 90%, 0% 100%);
 }
 
 .staff-frame-top
@@ -123,14 +125,16 @@
 }
 
 .staff-frame-brigde {
-  position: relative;
-  width: 100%;
-  max-width: 370px;
-  height: auto;
-  object-fit: cover;
-  z-index: 4;
-  top: 0;
-  left: 0;
+    position: relative;
+    width: 100%;
+    max-width: 370px;
+    height: auto;
+    object-fit: cover;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    height: 590px;
+    clip-path: polygon(0% 2%, 100% 0%, 100% 98%, 0% 100%);
 }
 
 .staff-frame-bottom
@@ -160,11 +164,15 @@
   position: relative;
   width: 100%;
   max-width: 100%;
-  height: auto;
+  height: 500px;
   object-fit: cover;
   z-index: 4;
   top: 0;
   left: 0;
+               /* top/right/bottom/left: 0 */
+           /* bám 100% chiều cao khung */
+      /* lấp đầy, không méo */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .staff-frame-underground {
@@ -172,9 +180,9 @@
   z-index: 3;
   width: 100%;
   max-width: 98%;
-  height: auto;
+  height: 113%;
   pointer-events: none;
-  top: -39px;
+  top: -34px;
   left: 15px;
 }
 
@@ -183,9 +191,9 @@
   z-index: 4;
   width: 100%;
   max-width: 98%;
-  height: auto;
+  height: 113%;
   pointer-events: none;
-  top: -39px;
+  top: -32px;
   left: 15px;
 }
 
@@ -321,7 +329,39 @@
 
 /* ====== ≤1280px: thu ảnh và ép về mép phải ====== */
 @media (max-width: 1280px) {
-  
+.staff-frame-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 500px;
+  object-fit: cover;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.staff-frame-underground {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  max-width: 97%;
+  height: 113%;
+  pointer-events: none;
+  top: -34px;
+  left: 17px;
+}
+
+.staff-frame-scrapper {
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  max-width: 97%;
+  height: 113%;
+  pointer-events: none;
+  top: -32px;
+  left: 17px;
+}
   .staff-image-reverse-bg {
     max-width: 100%;
     margin-left: auto;     /* đẩy khối ảnh sang phải */
@@ -330,33 +370,44 @@
 
   /* Ổn định chiều cao khung để overlay bám chuẩn */
 
-
-  .staff-frame-wrapper {
-    position: relative;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    z-index: 4;
-  }
-
-  /* Viền trắng & mảng xanh dính ảnh */
-  .staff-frame-scrapper {    /* viền trắng */
-    left: 8px;
-    top: -30px;
-    max-width: 98%;
-  }
-  .staff-frame-underground { /* mảng xanh */
-    left: 8px;
-    top: -30px;
-    max-width: 98%;
-  }
 }
 
 /* ====== ≤1024px: thu nhỏ thêm, giữ ảnh mép phải ====== */
 @media (max-width: 1024px) {
   .staff-image-reverse-bg {max-width: 100%;}
-  .staff-frame-scrapper {left: 10px;top: -23px;max-width: 97%;}
-  .staff-frame-underground {left: 10px;top: -23px;max-width: 97%;}
+.staff-frame-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 500px;
+  object-fit: cover;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.staff-frame-underground {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  max-width: 97%;
+  height: 113%;
+  pointer-events: none;
+  top: -34px;
+  left: 17px;
+}
+
+.staff-frame-scrapper {
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  max-width: 97%;
+  height: 113%;
+  pointer-events: none;
+  top: -32px;
+  left: 17px;
+}
 }
 
 /* Tablet và nhỏ hơn */
@@ -373,8 +424,9 @@
 
   
 
-  .staff-frame-scrapper {left: 14px;top: -16px;max-width: 96%;}
-  .staff-frame-underground {left: 14px;top: -16px;max-width: 96%;}
+
+  .staff-frame-scrapper {left: 14px;top: -32px;max-width: 96%;}
+  .staff-frame-underground {left: 14px;top: -31px;max-width: 96%;}
 
   .staff-block {
     flex-direction: column;
@@ -401,6 +453,8 @@
   .staff-frame-middle {
     max-width: 100%;
     left: 0;
+    height: 630px;
+    clip-path: polygon(0% 7%, 100% 0%, 100% 91%, 0% 100%);
   }
  .staff-frame-top{
   left:20px
@@ -462,6 +516,12 @@
 
 /* Điện thoại vừa (<=576px) */
 @media (max-width: 576px) {
+  .staff-frame-bg, .staff-frame-middle {
+    max-width: 100%;
+    left: 0;
+    height: 495px;
+    clip-path: polygon(0% 8%, 100% 0%, 100% 91%, 0% 100%);
+  }
   .staff-image {
     max-width: 260px;
   }
@@ -495,12 +555,19 @@
   }
 
 
-  .staff-frame-scrapper {left: 12px;top: -10px;max-width: 95%;}
-  .staff-frame-underground {left: 12px;top: -10px;max-width: 95%;}
+  .staff-frame-scrapper {left: 12px;top: -30px;max-width: 95%;}
+  .staff-frame-underground {left: 12px;top: -30px;max-width: 95%;}
+  
 }
 
 /* Điện thoại nhỏ (<=480px) */
 @media (max-width: 480px) {
+  .staff-frame-bg, .staff-frame-middle {
+    max-width: 100%;
+    left: 0;
+    height: 420px;
+    clip-path: polygon(0% 8%, 100% 0%, 100% 91%, 0% 100%);
+  }
   .staff-image {
     max-width: 220px;
   }
@@ -538,8 +605,8 @@
   }
 
 
-  .staff-frame-scrapper {left: 10px;top: -8px;}
-  .staff-frame-underground {left: 10px;top: -8px;}
+  .staff-frame-scrapper {left: 10px;top: -27px;}
+  .staff-frame-underground {left: 10px;top: -27px;}
 }
 
 @media (max-width: 460px) {
@@ -558,6 +625,12 @@
     top: -9px;
     max-width: 230px;
   }
+  .staff-frame-brigde {
+    left: 0px;
+    max-width: 100%;
+    height: 410px;
+    clip-path: polygon(0% 2%, 100% 0%, 100% 98%, 0% 100%);
+}
  
 }
 @media (max-width: 400px) {
@@ -577,8 +650,14 @@
     max-width: 204px;
   }
 
-  .staff-frame-scrapper {left: 9px;top: -4px;}
-  .staff-frame-underground {left: 9px;top: -4px;}
+  .staff-frame-scrapper {left: 9px;top: -30px;}
+  .staff-frame-underground {left: 9px;top: -30px;}
+  .staff-frame-brigde {
+    left: 0px;
+    max-width: 100%;
+    height: 360px;
+    clip-path: polygon(0% 2%, 100% 0%, 100% 98%, 0% 100%);
+}
 }
 
 @media (max-width: 360px) {
@@ -586,12 +665,12 @@
   /* Viền trắng & mảng xanh bám sát ảnh */
   .staff-frame-scrapper { /* viền trắng */
     left: 8px;
-    top: -4px;
+    top: -38px;
     max-width: 94%;
   }
   .staff-frame-underground { /* mảng xanh */
     left: 8px;
-    top: -4px;
+    top: -38px;
     max-width: 94%;
   }
 
@@ -603,8 +682,8 @@
 /* ====== ≤320px: cực nhỏ – thêm chút co giãn */
 @media (max-width: 320px) {
 
-  .staff-frame-scrapper {left: 7px;top: -4px;}
-  .staff-frame-underground {left: 7px;top: -4px;}
+  .staff-frame-scrapper {left: 7px;top: -36px;}
+  .staff-frame-underground {left: 7px;top: -36px;}
 
   .staff-section-box { padding: 10px; }
   .staff-section-box .staff-subtile { font-size: 14px; }
@@ -626,9 +705,22 @@
     top: -11px;
     max-width: 180px;
   }
+
+  .staff-frame-brigde {
+    left: 0px;
+    max-width: 100%;
+    height: 315px;
+    clip-path: polygon(0% 2%, 100% 0%, 100% 98%, 0% 100%);
+}
 }
 
 @media (max-width: 308px) {
+  .staff-frame-bg, .staff-frame-middle {
+    max-width: 100%;
+    left: 0;
+    height: 215px;
+    clip-path: polygon(0% 8%, 100% 0%, 100% 91%, 0% 100%);
+  }
     .staff-image {
     max-width: 110px;
   }
@@ -662,8 +754,22 @@
     top: -7px;
     max-width: 135px;
   }
+
+    .staff-frame-brigde {
+    left: 0px;
+    max-width: 100%;
+    height: 240px;
+    clip-path: polygon(0% 2%, 100% 0%, 100% 98%, 0% 100%);
+}
 }
 @media (max-width: 240px) {
+  
+    .staff-frame-brigde {
+    left: 0px;
+    max-width: 100%;
+    height: 190px;
+    clip-path: polygon(0% 2%, 100% 0%, 100% 98%, 0% 100%);
+}
   .staff-image-reverse {
     max-width: 120px;
     margin: 0px auto;
@@ -682,6 +788,12 @@
 }
 
 @media (max-width: 208px) {
+      .staff-frame-brigde {
+    left: 0px;
+    max-width: 100%;
+    height: 140px;
+    clip-path: polygon(0% 2%, 100% 0%, 100% 98%, 0% 100%);
+}
   .staff-image-reverse {
     max-width: 90px;
     margin: 0px auto;
@@ -699,24 +811,14 @@
   }
 }
 
-@media (max-width: 178px) {
-  .staff-image-reverse {
-    max-width: 60px;
-    margin: 0px auto;
-  }
 
-  .staff-frame-braved {
-    left: 2px;
-    top: -4px;
-    max-width: 55px;
-  }
-  .staff-frame-bottom {
-    left: 2px;
-    top: -3px;
-    max-width: 55px;
-  }
-}
 @media (max-width: 196px) {
+   .staff-frame-bg, .staff-frame-middle {
+    max-width: 100%;
+    left: 0;
+    height: 180px;
+    clip-path: polygon(0% 8%, 100% 0%, 100% 91%, 0% 100%);
+  }
     .staff-image {
     max-width: 90px;
   }
@@ -734,5 +836,28 @@
   }
     .staff-name {
       font-size: 8px;
+  }
+}@media (max-width: 178px) {
+      .staff-frame-brigde {
+    left: 0px;
+    max-width: 100%;
+    height: 96px;
+    clip-path: polygon(0% 2%, 100% 0%, 100% 98%, 0% 100%);
+}
+  
+  .staff-image-reverse {
+    max-width: 60px;
+    margin: 0px auto;
+  }
+
+  .staff-frame-braved {
+    left: 2px;
+    top: -4px;
+    max-width: 55px;
+  }
+  .staff-frame-bottom {
+    left: 2px;
+    top: -3px;
+    max-width: 55px;
   }
 }

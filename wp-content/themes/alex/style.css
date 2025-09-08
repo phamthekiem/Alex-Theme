@@ -40,14 +40,11 @@ Tags: alex
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
-<<<<<<< HEAD
 
 .site-content {
 	position: relative;
 }
-=======
 a:hover, a:active, a:focus, a:visited {text-decoration: none}
->>>>>>> origin
 
 /*--------------------------------------------------------------
 # Header
@@ -414,7 +411,7 @@ iframe[name='google_conversion_frame'] {height: 0 !important;width: 0 !important
 .hamburger{display:inline-block;width:30px;height:30px;cursor:pointer;-webkit-transition-property:opacity,-webkit-filter;transition-property:opacity,filter;transition-property:opacity,filter,-webkit-filter;-webkit-transition-duration:.15s;transition-duration:.15s;-webkit-transition-timing-function:linear;transition-timing-function:linear;font:inherit;color:inherit;text-transform:none;background-color:transparent;border:0;margin:0;overflow:visible}
 .hamburger-box{width:30px;height:24px;display:inline-block;position:relative}
 .hamburger-inner{display:block;top:50%;margin-top:-2px}
-.hamburger-inner,.hamburger-inner::after,.hamburger-inner::before{width:30px;height:3px;background-color:#FFF;border-radius:2px;position:absolute;-webkit-transition-property:-webkit-transform;transition-property:transform;transition-property:transform,-webkit-transform;-webkit-transition-duration:.15s;transition-duration:.15s;-webkit-transition-timing-function:ease;transition-timing-function:ease}
+.hamburger-inner,.hamburger-inner::after,.hamburger-inner::before{width:30px;height:3px;background-color:#017542;border-radius:2px;position:absolute;-webkit-transition-property:-webkit-transform;transition-property:transform;transition-property:transform,-webkit-transform;-webkit-transition-duration:.15s;transition-duration:.15s;-webkit-transition-timing-function:ease;transition-timing-function:ease}
 .hamburger-inner::after,.hamburger-inner::before{content:"";display:block}
 .hamburger-inner::before{top:-10px}.hamburger-inner::after{bottom:-10px}
 .hamburger--collapse .hamburger-inner::before{-webkit-transition:top .12s .3s cubic-bezier(.33333,.66667,.66667,1),-webkit-transform .15s cubic-bezier(.55,.055,.675,.19);transition:top .12s .3s cubic-bezier(.33333,.66667,.66667,1),transform .15s cubic-bezier(.55,.055,.675,.19);transition:top .12s .3s cubic-bezier(.33333,.66667,.66667,1),transform .15s cubic-bezier(.55,.055,.675,.19),-webkit-transform .15s cubic-bezier(.55,.055,.675,.19)}

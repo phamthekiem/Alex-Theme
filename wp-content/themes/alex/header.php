@@ -29,7 +29,7 @@
 						</span>
 					</a>
 					<div class="row align-items-center">
-						<div class="col-xl-2 col-lg-2 col-5">
+						<div class="col-xl-2 col-lg-2 col-4">
 							<div class="logo">
 								<a href="/">
 									<img src="<?php the_field('logo', 'option') ?>" alt="Logo">
@@ -37,7 +37,7 @@
 							</div>
 						</div>
 						<!-- <div class="col-xl-1 d-none d-md-block"></div> -->
-						<div class="col-xl-10 col-lg-9 col-5">
+						<div class="col-xl-10 col-lg-9 col-7">
 							<div class="top-menu">
 								<div class="top-language">
 									<?php dynamic_sidebar('sidebar-2') ?>
