@@ -21,13 +21,14 @@
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 
-define( 'WP_HOME', 'http://localhost:8081/alex-theme' ); 
-define( 'WP_SITEURL', 'http://localhost:8081/alex-theme' );
+
+define( 'WP_HOME', 'http://alex.dragoon.vn' );
+define( 'WP_SITEURL', 'http://alex.dragoon.vn' );
 
 define( 'DB_NAME', 'wpdb_wordpress' );
 
 /** Database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'wpuser' );
 
 /** Database password */
 define( 'DB_PASSWORD', 'wp@123' );
