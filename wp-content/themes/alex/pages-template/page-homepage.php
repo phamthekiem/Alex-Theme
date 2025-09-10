@@ -26,6 +26,9 @@ get_header(); ?>
 			<div class="overlay-box-side">
 				<?php the_field('home_banner_recruit') ?>
 			</div>
+			<!-- <div class="overlay-box-side vi">
+				<?php the_field('home_banner_recruit') ?>
+			</div> -->
 			</div>
 	</section>
 
