@@ -31,6 +31,7 @@ get_header(); ?>
 				<?php the_field('home_banner_recruit') ?>
 			</div>
 			<?php */ ?>
+
 			</div>
 	</section>
 
