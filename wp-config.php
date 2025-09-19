@@ -21,8 +21,8 @@
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 
-define( 'WP_HOME', 'https://alex.dragoon.vn' );
-define( 'WP_SITEURL', 'https://alex.dragoon.vn' );
+define( 'WP_HOME', 'http://alex.dragoon.vn' );
+define( 'WP_SITEURL', 'http://alex.dragoon.vn' );
 
 define( 'DB_NAME', 'wpdb_wordpress' );
 
