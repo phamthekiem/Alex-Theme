@@ -40,29 +40,17 @@ get_header(); ?>
 		<ul>
 			<li>
 				<a href="#tokyo-head-office">
-					<?php if(pll_current_language() == 'ja') {
-						echo '東京本社';
-					} else {
-						echo 'Trụ sở chính Tokyo';
-					} ?>
+					<?php pll_e('Trụ sở chính Tokyo'); ?>
 				</a>
 			</li>
 			<li>
 				<a href="#shimane-branch">
-					<?php if(pll_current_language() == 'ja') {
-						echo '島根支社';
-					} else {
-						echo 'Chi nhánh Shimane';
-					} ?>
+					<?php pll_e('Chi nhánh Shimane'); ?>
 				</a>
 			</li>
 			<li>
 				<a href="#vietnam-studio">
-					<?php if(pll_current_language() == 'ja') {
-						echo 'ベトナムスタジオ';
-					} else {
-						echo 'Văn phòng Việt Nam';
-					} ?>
+					<?php pll_e('Văn phòng Việt Nam'); ?>
 				</a>
 			</li>
 		</ul>
@@ -93,11 +81,7 @@ get_header(); ?>
 	<div class="subtitle-frame-wrapper-recruit">
 		<img class="subtitle-frame-recruit" src="<?php bloginfo('template_directory') ?>/assets/image/グループ 27.png" alt="Subtitle Frame">
 		<span class="subtitle-text-recruit">
-			<?php if(pll_current_language() == 'ja') {
-				echo '東京本社';
-			} else {
-				echo 'Trụ sở chính tại Tokyo';
-			} ?>
+			<?php pll_e('Trụ sở chính tại Tokyo'); ?>
 		</span>
 	</div>
     <div class="container">
@@ -156,11 +140,7 @@ get_header(); ?>
 	<div class="subtitle-frame-wrapper-recruit">
 		<img class="subtitle-frame-recruit" src="<?php bloginfo('template_directory') ?>/assets/image/グループ 27.png" alt="Subtitle Frame">
 		<span class="subtitle-text-recruit">
-			<?php if(pll_current_language() == 'ja') {
-				echo '島根支社';
-			} else {
-				echo 'Chi nhánh Shimane';
-			} ?>
+			<?php pll_e('Chi nhánh Shimane'); ?>
 		</span>
 	</div>
 
@@ -234,11 +214,7 @@ get_header(); ?>
 	<div class="subtitle-frame-wrapper-recruit">
 		<img class="subtitle-frame-recruit" src="<?php bloginfo('template_directory') ?>/assets/image/グループ 27.png" alt="Subtitle Frame">
 		<span class="subtitle-text-recruit">
-			<?php if(pll_current_language() == 'ja') {
-				echo 'ベトナムスタジオ';
-			} else {
-				echo 'Văn phòng tại Việt Nam';
-			} ?>
+			<?php pll_e('Văn phòng Việt Nam'); ?>
 		</span>
 	</div>
 
