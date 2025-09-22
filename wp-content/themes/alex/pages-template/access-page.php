@@ -81,7 +81,7 @@ get_header(); ?>
 	<div class="subtitle-frame-wrapper-recruit">
 		<img class="subtitle-frame-recruit" src="<?php bloginfo('template_directory') ?>/assets/image/グループ 27.png" alt="Subtitle Frame">
 		<span class="subtitle-text-recruit">
-			<?php pll_e('Trụ sở chính tại Tokyo'); ?>
+			<?php pll_e('Trụ sở chính Tokyo'); ?>
 		</span>
 	</div>
     <div class="container">
