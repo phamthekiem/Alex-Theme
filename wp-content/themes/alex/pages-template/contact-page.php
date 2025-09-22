@@ -73,9 +73,9 @@ get_header();
             <!-- STEP indicators -->
             <div id="position_box">
                 <ul>
-                    <li class="active"><span><?php echo pll__('step1'); ?></span> →</li>
-                    <li><span><?php echo pll__('step2'); ?></span> →</li>
-                    <li><span><?php echo pll__('step3'); ?></span></li>
+                    <li class="active"><span><?php echo pll__('STEP1: Nhập thông tin chi tiết'); ?></span> →</li>
+                    <li><span><?php echo pll__('STEP2: Xác nhận thông tin chi tiết'); ?></span> →</li>
+                    <li><span><?php echo pll__('STEP3: Hoàn tất tiếp nhận'); ?></span></li>
                 </ul>
             </div>
 
@@ -85,19 +85,19 @@ get_header();
                     <table>
                         <tbody>
                             <tr>
-                                <th><?php echo pll__('form_name'); ?><span class="required">※必須</span></th>
+                                <th><?php echo pll__('Họ tên'); ?><span class="required">※<?php echo pll__('Bắt buộc'); ?></span></th>
                                 <td><input name="name" type="text" size="40" required></td>
                             </tr>
                             <tr>
-                                <th><?php echo pll__('form_furigana'); ?></th>
+                                <th><?php echo pll__('Furigana'); ?></th>
                                 <td><input name="furigana" type="text" size="40"></td>
                             </tr>
                             <tr>
-                                <th><?php echo pll__('form_phone'); ?></th>
+                                <th><?php echo pll__('Số điện thoại'); ?></th>
                                 <td><input name="phone" type="tel" size="11" maxlength="11"></td>
                             </tr>
                             <tr>
-                                <th><?php echo pll__('form_email'); ?><span class="required">※必須</span></th>
+                                <th><?php echo pll__('Email'); ?><span class="required">※<?php echo pll__('Bắt buộc'); ?></span></th>
                                 <td>
                                     <input name="email" type="email" size="40" required>
                                     <div class="plus_txt">
@@ -109,50 +109,50 @@ get_header();
                                 </td>
                             </tr>
                             <tr>
-                                <th><?php echo pll__('form_email_confirm'); ?><span class="required">※必須</span></th>
+                                <th><?php echo pll__('Xác nhận Email'); ?><span class="required">※<?php echo pll__('Bắt buộc'); ?></span></th>
                                 <td><input name="email-confirm" type="email" size="40" required></td>
                             </tr>
                             <tr>
-                                <th><?php echo pll__('form_content'); ?><span class="required">※必須</span></th>
+                                <th><?php echo pll__('Nội dung yêu cầu'); ?><span class="required">※<?php echo pll__('Bắt buộc'); ?></span></th>
                                 <td><textarea name="content" id="comment" required></textarea></td>
                             </tr>
                         </tbody>
                     </table>  
                     <p id="sub_btn">
                         <button type="button" class="contact-detail-btn submit">
-                            <?php echo pll__('btn_check'); ?>
+                            <?php echo pll__('Kiểm tra thông tin'); ?>
                         </button>
                     </p>
                 </form>
 
                 <!-- Step2 -->
                 <div class="submittable" style="display:none;">
-                    <p><?php echo pll__('msg_confirm'); ?></p>
+                    <p><?php echo pll__('以下の内容で間違いがなければ、「送信」ボタンを押してください。'); ?></p>
                     <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="POST" id="confirmform">
                         <table cellpadding="0" cellspacing="0" class="confirm_table">
                             <tbody>
                                 <tr>
-                                    <th><?php echo pll__('form_name'); ?></th>
+                                    <th><?php echo pll__('Họ tên'); ?></th>
                                     <td data-field="name"></td>
                                     <input type="hidden" name="name" value="">
                                 </tr>
                                 <tr>
-                                    <th><?php echo pll__('form_furigana'); ?></th>
+                                    <th><?php echo pll__('Furigana'); ?></th>
                                     <td data-field="furigana"></td>
                                     <input type="hidden" name="furigana" value="">
                                 </tr>
                                 <tr>
-                                    <th><?php echo pll__('form_phone'); ?></th>
+                                    <th><?php echo pll__('Số điện thoại'); ?></th>
                                     <td data-field="phone"></td>
                                     <input type="hidden" name="phone" value="">
                                 </tr>
                                 <tr>
-                                    <th><?php echo pll__('form_email'); ?></th>
+                                    <th><?php echo pll__('Email'); ?></th>
                                     <td data-field="email"></td>
                                     <input type="hidden" name="email" value="">
                                 </tr>
                                 <tr>
-                                    <th><?php echo pll__('form_content'); ?></th>
+                                    <th><?php echo pll__('Nội dung yêu cầu'); ?></th>
                                     <td data-field="content"></td>
                                     <input type="hidden" name="content" value="">
                                 </tr>
@@ -165,10 +165,10 @@ get_header();
 
                         <div id="confirm_btn">
                             <button type="button" class="h_back contact-detail-btn">
-                                <?php echo pll__('btn_back'); ?>
+                                <?php echo pll__('Quay lại'); ?>
                             </button>
                             <button type="submit" name="submit-a" class="submit-a confirm-detail-btn">
-                                <?php echo pll__('btn_send'); ?>
+                                <?php echo pll__('Gửi'); ?>
                             </button>
                         </div>
                     </form>
@@ -177,10 +177,9 @@ get_header();
                 <!-- Step3 -->
                 <div class="step-3" style="display:none;">
                     <p class="success">
-                        <?php echo pll__('msg_success'); ?>
+                        <?php echo pll__('Cảm ơn bạn đã quan tâm. Quá trình gửi thông tin đã thành công.'); ?>
                     </p>
                 </div>
-
             </div>
         </div>
     </div>
