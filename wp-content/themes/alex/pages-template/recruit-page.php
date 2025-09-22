@@ -22,20 +22,6 @@ get_header(); ?>
 
 
 
-<!-- <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/recruit-page.css">
-
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/results-page.css">
-
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/work-page.css">
-
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/service-page.css">
-
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/about-page.css">
-
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/top-page.css"> -->
-
-
-
 <section class="about">
 
     <div class="about-avatar">
@@ -183,17 +169,7 @@ get_header(); ?>
                         </div>
 
                         <a href="<?php the_permalink() ?>" class="recruit-detail-btn text-decoration-none">
-
-                            <?php if(pll_current_language() == 'ja') {
-
-                                echo '詳細はこちら';
-
-                            } else {
-
-                                echo 'Xem thêm';
-
-                            } ?>
-
+                            <?php pll_e('Xem thêm'); ?>
                         </a>
 
                     </div>

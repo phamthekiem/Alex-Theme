@@ -13,18 +13,10 @@ get_header();
 <div class="submenu-tabs-3">
     <div class="container-2">
         <span class="main-title-staff">
-            <?php if(pll_current_language() == 'ja') {
-                echo '社内イベント';
-            } else {
-                echo 'Sự kiện công ty';
-            } ?>
+            <?php pll_e('Sự kiện công ty'); ?>
         </span>
         <span class="subtitle-staff">
-            <?php if(pll_current_language() == 'ja') {
-                echo 'スタッフの声';
-            } else {
-                echo 'Bình luận của nhân viên';
-            } ?>
+            <?php pll_e('Bình luận của nhân viên'); ?>
         </span>
     </div>
 </div>

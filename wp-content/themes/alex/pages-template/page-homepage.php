@@ -41,11 +41,7 @@ get_header(); ?>
 			<div class="news-grid">
 				<div class="news-box">
 					<h2 class="news-title">
-						<?php if(pll_current_language() == 'ja') {
-						echo 'NEWS';
-						} else {
-							echo 'Tin tức';
-						} ?>
+						<?php pll_e('Tin tức'); ?>
 					</h2>
 					<div class="news-scroll-wrapper">
 						<div class="news-list" id="newsList">

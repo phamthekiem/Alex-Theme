@@ -1,61 +1,31 @@
 <?php
 
 /**
-
  * Template Name: About page
-
  *
-
  *
-
  * @link https://codex.wordpress.org/Template_Hierarchy
-
  *
-
  * @package SH_Theme
-
  */
-
-
 
 get_header(); ?>
 
-<!-- <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/about-page.css"> -->
-
-
-
-
-
 <section class="about">
-
     <div class="about-avatar">
-
         <!-- Ảnh nền tự động chuyển bằng CSS -->
-
         <?php 
-
         $images = get_field('about_page_banner');
-
         if ($images):
-
             $total = count($images);
-
             $count = 1;
-
             foreach ($images as $image):
-
                 ?>
-
                 <div class="about-bg bg<?php echo $count; ?>" style="background-image:url('<?php echo esc_url($image); ?>');"></div>
-
                 <?php
-
                 $count++;
-
             endforeach;
-
         endif;
-
         ?>
 
         
@@ -99,17 +69,7 @@ get_header(); ?>
             <li>
 
                 <a href="#message-from-the-ceo">
-
-                    <?php if(pll_current_language() == 'ja') {
-
-                        echo '代表メッセージ';
-
-                    } else {
-
-                        echo 'Thông điệp từ CEO';
-
-                    } ?>
-
+                    <?php pll_e('Thông điệp từ CEO'); ?>
                 </a>
 
             </li>
@@ -117,17 +77,7 @@ get_header(); ?>
             <li>
 
                 <a href="#company-profile">
-
-                    <?php if(pll_current_language() == 'ja') {
-
-                        echo '会社概要';
-
-                    } else {
-
-                        echo 'Hồ sơ công ty';
-
-                    } ?>
-
+                    <?php pll_e('Hồ sơ công ty'); ?>
                 </a>
 
             </li>
@@ -135,17 +85,7 @@ get_header(); ?>
             <li>
 
                 <a href="#history">
-
-                    <?php if(pll_current_language() == 'ja') {
-
-                        echo '沿革';
-
-                    } else {
-
-                        echo 'Lịch sử hình thành';
-
-                    } ?>
-
+                    <?php pll_e('Lịch sử hình thành'); ?>
                 </a>
 
             </li>
@@ -153,39 +93,14 @@ get_header(); ?>
             <li>
 
                 <a href="#organization-chart">
-
-                    <?php if(pll_current_language() == 'ja') {
-
-                        echo '組織図';
-
-                    } else {
-
-                        echo 'Sơ đồ tổ chức';
-
-                    } ?>
-
+                    <?php pll_e('Sơ đồ tổ chức'); ?>
                 </a>
-
-                
-
-                </a>
-
             </li>
 
             <li>
 
                 <a href="#major-clients">
-
-                    <?php if(pll_current_language() == 'ja') {
-
-                        echo '主要取引先';
-
-                    } else {
-
-                        echo 'Khách hàng của chúng tôi';
-
-                    } ?>
-
+                    <?php pll_e('Khách hàng của chúng tôi'); ?>
                 </a>
 
             </li>

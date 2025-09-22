@@ -40,11 +40,7 @@ $current_id = get_the_ID();
             <div class="about-right-text">
                 <span class="company-info"><?php the_title() ?></span>
                 <h1 class="about-heading">
-                    <?php if(pll_current_language() == 'ja') {
-                        echo 'RECRUIT';
-                    } else {
-                        echo 'Tuyển dụng';
-                    } ?>
+                    <?php pll_e('Tuyển dụng'); ?>
                 </h1>
             </div>
         </div>
@@ -116,7 +112,7 @@ if ($recruits->have_posts()) :
                     <div class="subtitle-frame-wrapper-job">
                         <img src="<?php bloginfo('template_directory') ?>/assets/image/グループ 27.png" alt="Subtitle Frame" class="subtitle-frame-job">
                         <span class="subtitle-text-job">
-                            <?php echo (pll_current_language() == 'ja') ? '採用プロセス' : 'Quy trình tuyển dụng'; ?>
+                            <?php pll_e('Quy trình tuyển dụng'); ?>
                         </span>
                     </div>
 
