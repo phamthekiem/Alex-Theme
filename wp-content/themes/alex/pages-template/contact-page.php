@@ -73,9 +73,9 @@ get_header();
             <!-- STEP indicators -->
             <div id="position_box">
                 <ul>
-                    <li class="active"><span><?php echo pll_current_language() == 'ja' ? 'STEP1　内容入力' : 'BƯỚC 1: Nhập thông tin chi tiết'; ?></span> →</li>
-                    <li><span><?php echo pll_current_language() == 'ja' ? 'STEP2　内容確認' : 'BƯỚC 2: Xác nhận thông tin chi tiết'; ?></span> →</li>
-                    <li><span><?php echo pll_current_language() == 'ja' ? 'STEP3　受付完了' : 'BƯỚC 3: Hoàn tất tiếp nhận'; ?></span></li>
+                    <li class="active"><span><?php echo pll__('step1'); ?></span> →</li>
+                    <li><span><?php echo pll__('step2'); ?></span> →</li>
+                    <li><span><?php echo pll__('step3'); ?></span></li>
                 </ul>
             </div>
 
@@ -85,76 +85,74 @@ get_header();
                     <table>
                         <tbody>
                             <tr>
-                                <th><?php echo pll_current_language() == 'ja' ? 'お名前' : 'Họ tên'; ?><span class="required">※必須</span></th>
+                                <th><?php echo pll__('form_name'); ?><span class="required">※必須</span></th>
                                 <td><input name="name" type="text" size="40" required></td>
                             </tr>
                             <tr>
-                                <th><?php echo pll_current_language() == 'ja' ? 'フリガナ' : 'Furigana'; ?></th>
+                                <th><?php echo pll__('form_furigana'); ?></th>
                                 <td><input name="furigana" type="text" size="40"></td>
                             </tr>
                             <tr>
-                                <th><?php echo pll_current_language() == 'ja' ? '電話番号' : 'Số điện thoại'; ?></th>
+                                <th><?php echo pll__('form_phone'); ?></th>
                                 <td><input name="phone" type="tel" size="11" maxlength="11"></td>
                             </tr>
                             <tr>
-                                <th><?php echo pll_current_language() == 'ja' ? 'メールアドレス' : 'Email'; ?><span class="required">※必須</span></th>
+                                <th><?php echo pll__('form_email'); ?><span class="required">※必須</span></th>
                                 <td>
                                     <input name="email" type="email" size="40" required>
                                     <div class="plus_txt">
                                         <?php the_field('contact_page_form_email_address') ?>
-                                        ■<a href="<?php the_field('docomo_users_url') ?>" target="_blank"><?php echo pll_current_language() == 'ja' ? 'docomoをご使用の方' : 'Dành cho người dùng Docomo'; ?></a>
-                                        ■<a href="<?php the_field('for_au_users_url') ?>" target="_blank"><?php echo pll_current_language() == 'ja' ? 'auをご使用の方' : 'Dành cho người dùng AU'; ?></a>
-                                        ■<a href="<?php the_field('for_softbank_users') ?>" target="_blank"><?php echo pll_current_language() == 'ja' ? 'SoftBankをご使用の方' : 'Dành cho người dùng SoftBank'; ?></a>
+                                        ■<a href="<?php the_field('docomo_users_url') ?>" target="_blank"><?php echo pll__('Dành cho người dùng Docomo'); ?></a>
+                                        ■<a href="<?php the_field('for_au_users_url') ?>" target="_blank"><?php echo pll__('Dành cho người dùng AU'); ?></a>
+                                        ■<a href="<?php the_field('for_softbank_users') ?>" target="_blank"><?php echo pll__('Dành cho người dùng SoftBank'); ?></a>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <th><?php echo pll_current_language() == 'ja' ? 'メールアドレス確認用' : 'Xác nhận Email'; ?><span class="required">※必須</span></th>
+                                <th><?php echo pll__('form_email_confirm'); ?><span class="required">※必須</span></th>
                                 <td><input name="email-confirm" type="email" size="40" required></td>
                             </tr>
                             <tr>
-                                <th><?php echo pll_current_language() == 'ja' ? 'お問い合わせ内容' : 'Nội dung yêu cầu'; ?><span class="required">※必須</span></th>
+                                <th><?php echo pll__('form_content'); ?><span class="required">※必須</span></th>
                                 <td><textarea name="content" id="comment" required></textarea></td>
                             </tr>
                         </tbody>
                     </table>  
                     <p id="sub_btn">
                         <button type="button" class="contact-detail-btn submit">
-                            <?php echo pll_current_language() == 'ja' ? '入力内容を確認する' : 'Kiểm tra thông tin'; ?>
+                            <?php echo pll__('btn_check'); ?>
                         </button>
                     </p>
                 </form>
 
                 <!-- Step2 -->
                 <div class="submittable" style="display:none;">
-                    <p>
-                        <?php if ( function_exists('pll__') ) echo pll__('以下の内容で間違いがなければ、「送信」ボタンを押してください。'); ?>
-                    </p>
-                    <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="POST" id="confirmform" style="">
+                    <p><?php echo pll__('msg_confirm'); ?></p>
+                    <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="POST" id="confirmform">
                         <table cellpadding="0" cellspacing="0" class="confirm_table">
                             <tbody>
                                 <tr>
-                                    <th><?php echo pll_current_language()=='ja' ? 'お名前' : 'Họ tên'; ?></th>
+                                    <th><?php echo pll__('form_name'); ?></th>
                                     <td data-field="name"></td>
                                     <input type="hidden" name="name" value="">
                                 </tr>
                                 <tr>
-                                    <th><?php echo pll_current_language()=='ja' ? 'フリガナ' : 'Furigana'; ?></th>
+                                    <th><?php echo pll__('form_furigana'); ?></th>
                                     <td data-field="furigana"></td>
                                     <input type="hidden" name="furigana" value="">
                                 </tr>
                                 <tr>
-                                    <th><?php echo pll_current_language()=='ja' ? '電話番号' : 'Số điện thoại'; ?></th>
+                                    <th><?php echo pll__('form_phone'); ?></th>
                                     <td data-field="phone"></td>
                                     <input type="hidden" name="phone" value="">
                                 </tr>
                                 <tr>
-                                    <th><?php echo pll_current_language()=='ja' ? 'メールアドレス' : 'Email'; ?></th>
+                                    <th><?php echo pll__('form_email'); ?></th>
                                     <td data-field="email"></td>
                                     <input type="hidden" name="email" value="">
                                 </tr>
                                 <tr>
-                                    <th><?php echo pll_current_language()=='ja' ? 'お問い合わせ内容' : 'Nội dung yêu cầu'; ?></th>
+                                    <th><?php echo pll__('form_content'); ?></th>
                                     <td data-field="content"></td>
                                     <input type="hidden" name="content" value="">
                                 </tr>
@@ -167,10 +165,10 @@ get_header();
 
                         <div id="confirm_btn">
                             <button type="button" class="h_back contact-detail-btn">
-                                <?php echo pll_current_language()=='ja' ? '入力画面に戻る' : 'Quay lại'; ?>
+                                <?php echo pll__('btn_back'); ?>
                             </button>
                             <button type="submit" name="submit-a" class="submit-a confirm-detail-btn">
-                                <?php echo pll_current_language()=='ja' ? '送信する' : 'Gửi'; ?>
+                                <?php echo pll__('btn_send'); ?>
                             </button>
                         </div>
                     </form>
@@ -179,11 +177,7 @@ get_header();
                 <!-- Step3 -->
                 <div class="step-3" style="display:none;">
                     <p class="success">
-                        <?php if(pll_current_language() == 'ja') {
-                            echo 'お問い合わせありがとうございました。<br>送信は無事に完了しました。';
-                        } else {
-                            echo 'Cảm ơn bạn đã quan tâm. <br>Quá trình gửi thông tin đã thành công.';
-                        } ?>
+                        <?php echo pll__('msg_success'); ?>
                     </p>
                 </div>
 
@@ -191,6 +185,7 @@ get_header();
         </div>
     </div>
 </section>
+
 
 
 <?php get_footer(); ?>
