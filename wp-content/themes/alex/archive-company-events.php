@@ -10,11 +10,7 @@ get_header(); ?>
 <div class="submenu-tabs-2">
     <div class="container-2">
         <span class="main-title">
-            <?php if (function_exists('pll_current_language') && pll_current_language() == 'ja') {
-                echo '社内イベント';
-            } else {
-                echo 'Sự kiện công ty';
-            } ?>
+            <?php pll_e('Sự kiện công ty'); ?>
         </span>
     </div>
 </div>
@@ -92,13 +88,6 @@ if (!empty($terms) && !is_wp_error($terms)) {
                                     </div>
                                 <?php endif; ?>
 
-                                <!-- <a class="interview-readmore" href="<?php //the_permalink(); ?>">
-                                    <?php //if (function_exists('pll_current_language') && pll_current_language() == 'ja') {
-                                    //     echo '続きを読む';
-                                    // } else {
-                                    //     echo 'Xem chi tiết';
-                                    //} ?>
-                                </a> -->
                             </div>
                         </div>
 
@@ -106,11 +95,7 @@ if (!empty($terms) && !is_wp_error($terms)) {
                     wp_reset_postdata();
                 else : ?>
                     <p>
-                        <?php if (function_exists('pll_current_language') && pll_current_language() == 'ja') {
-                            echo 'イベントは見つかりませんでした。';
-                        } else {
-                            echo 'Không tìm thấy sự kiện nào.';
-                        } ?>
+                        <?php pll_e('Không tìm thấy sự kiện nào.'); ?>
                     </p>
                 <?php endif; ?>
             </div>

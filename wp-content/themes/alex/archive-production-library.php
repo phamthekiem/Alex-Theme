@@ -33,11 +33,7 @@ $top_terms = get_terms([
 <div class="submenu-tabs-3">
     <div class="container-2">
         <span class="main-title-staff">
-            <?php if (function_exists('pll_current_language') && pll_current_language() == 'ja') {
-                echo '制作ライブラリ';
-            } else {
-                echo 'Thư viện video';
-            } ?>
+            <?php pll_e('Thư viện video'); ?>
         </span>
     </div>
 </div>

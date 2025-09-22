@@ -220,6 +220,22 @@ add_action( 'phpmailer_init', function( $phpmailer ) {
 });
 
 // Polylang
+add_action( 'init', 'kt_register_polylang_strings' );
+function kt_register_polylang_strings() {
+    if ( function_exists( 'pll_register_string' ) ) {
+        $file_path = get_template_directory() . '/inc/lang-strings.php';
+
+        if ( file_exists( $file_path ) ) {
+            $strings = include $file_path;
+
+            if ( is_array( $strings ) ) {
+                foreach ( $strings as $key => $text ) {
+                    pll_register_string( $key, $text, 'Theme Labels', false );
+                }
+            }
+        }
+    }
+}
 
 
 

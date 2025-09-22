@@ -10,15 +10,6 @@
 
 get_header(); ?>
 
-<!-- <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/スタッフの声TOP-page.css">
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/社内イベント-page.css">
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/recruit-page.css">
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/過去開発実績-page.css">
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/work-page.css">
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/service-page.css">
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/about-page.css">
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/top-page.css"> -->
-
 
 <div class="submenu-tabs-3">
     <div class="container-2">
