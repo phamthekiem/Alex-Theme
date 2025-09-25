@@ -144,5 +144,11 @@ jQuery(document).ready(function($) {
     });
 
     $('.video-card').fadeIn(0);
+
+    $('#collapseBtn').on('click', function() {
+        $('.sidebar-wrapper').toggleClass('collapsed');
+        $(this).toggleClass('hide-sidebar')
+    });
+
 });
 

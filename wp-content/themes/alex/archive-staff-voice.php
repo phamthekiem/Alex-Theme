@@ -17,15 +17,29 @@ get_header(); ?>
         </span>
     </div>
 </div>
-<a class="popup-name" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-<!-- <nav class="submenu-tabs-1">
+<!-- <a class="popup-name" href="<?php the_permalink(); ?>"><?php the_title(); ?></a> -->
+<nav class="submenu-tabs-1">
     <div class="container">
         <ul>
-            <li><a href="job-openings-page.html">募集職種</a></li>
-            <li><a href="comments-top-page.html">スタッフの声ＴＯＰ</a></li>
+            <?php 
+            $page = get_page_by_path('staff-voice-archive-settings');
+            if ($page) {
+                $translated_id = pll_get_post($page->ID);
+
+                if (have_rows('archive_menu_banner', $translated_id)) :
+                    while (have_rows('archive_menu_banner', $translated_id)) : the_row();
+                        $title = get_sub_field('title');
+                        $url  = get_sub_field('url');
+                        ?>
+                        <li><a href="<?php echo $url; ?>"><?php echo $title; ?></a></li>
+                        <?php
+                    endwhile;
+                endif;
+            }
+            ?>
         </ul>
     </div>
-</nav> -->
+</nav>
 
 <section class="creation-interview-section">
     <div class="container">
