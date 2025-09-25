@@ -29,6 +29,23 @@ $top_terms = get_terms([
         align-items: center;
         justify-content: center;
     }
+
+    .sidebar-wrapper {
+        transition: width 0.3s ease;
+        position: relative;
+        flex-shrink: 0;
+    }
+    .sidebar-wrapper.collapsed {
+        width: 20px;
+        background: #C56B24;
+    }
+    .sidebar-wrapper .sidebar {
+        transition: opacity 0.3s ease;
+    }
+    .sidebar-wrapper.collapsed .sidebar {
+        opacity: 0;
+        pointer-events: none;
+    }
 </style>
 <div class="submenu-tabs-3">
     <div class="container-2">
@@ -46,7 +63,7 @@ $top_terms = get_terms([
     <div class="sidebar-wrapper">
         <aside class="sidebar" aria-label="Navigation">
             <div class="sidebar__scroll" id="navScroll">
-                <button class="help-btn" id="helpBtn" title="Trợ giúp"><span>?</span></button>
+                <!-- <button class="help-btn" id="helpBtn" title="Trợ giúp"><span>?</span></button> -->
 
                 <nav class="catnav" id="catNav" aria-label="Thư mục video">
                     <ul class="catnav-root">
@@ -90,23 +107,25 @@ $top_terms = get_terms([
             </div>
         </aside>
 
-        <!-- <button class="collapse-btn" id="collapseBtn" aria-label="Thu gọn/ Mở rộng nav" title="Thu gọn/ Mở rộng">
+        <button class="collapse-btn" id="collapseBtn" aria-label="Thu gọn/ Mở rộng nav" title="Thu gọn/ Mở rộng">
             <i class="fas fa-angle-double-left"></i>
-        </button> -->
+        </button>
     </div>
 
     <main class="content" id="content" aria-live="polite">
         <div class="pager" id="pager"></div>  
         <div class="grid" id="videoGrid">
             <?php
+            $paged = get_query_var('paged') ? get_query_var('paged') : 1;
             $args = [
                 'post_type'      => 'production-library',
-                'posts_per_page' => -1,
+                'posts_per_page' => 12,
+                'paged'          => $paged,
             ];
-            $query = new WP_Query($args);
+            $wp_query = new WP_Query($args);
 
-            if ($query->have_posts()) :
-                while ($query->have_posts()) : $query->the_post();
+            if ($wp_query->have_posts()) :
+                while ($wp_query->have_posts()) : $wp_query->the_post();
 
                     $terms = wp_get_post_terms(get_the_ID(), 'product-library-category');
                     $cat_slug = '';
@@ -157,10 +176,13 @@ $top_terms = get_terms([
                     </article>
                 <?php
                 endwhile;
-                wp_reset_postdata();
             endif;
             ?>
         </div>
+        <?php 
+        shtheme_pagination();
+        wp_reset_postdata();
+        ?>
     </main>
 </div>
 

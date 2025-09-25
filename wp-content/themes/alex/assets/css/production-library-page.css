@@ -82,7 +82,7 @@ summary::marker{ display:none; }           /* nếu dùng <details>/<summary> �
   width:100%;
   display:flex; align-items:center; justify-content:space-between;
   gap:10px;
-  padding:8px 10px 6px;
+  padding:8px 0px 6px;
   font-weight:900; color:#fff;
   background:transparent; border:0; cursor:pointer;
 }
@@ -135,7 +135,9 @@ summary::marker{ display:none; }           /* nếu dùng <details>/<summary> �
 }
 .collapse-btn:hover{ background:#6e3a16; }
 .collapse-btn span{ pointer-events:none; }
-
+.collapse-btn.hide-sidebar i {
+      transform: rotate(180deg);
+}
 /* -------------------- Help button (top-right of sidebar) -------------------- */
 .help-btn{
   position:absolute; top:8px; right:0;
@@ -203,6 +205,20 @@ summary::marker{ display:none; }           /* nếu dùng <details>/<summary> �
 .page-btn.is-active{ background:#7a7800; color:#fff; }
 .page-btn.is-disabled{
   background:#e5e5e5; color:#fff; cursor:not-allowed; opacity:.9;
+}
+
+.page_nav {
+    text-align: center;
+    margin: 30px 0 15px;
+}
+.page_nav .page-numbers {
+  border: 1px solid #000;
+  padding: 3px 10px;
+  color: #000;
+}
+.page_nav .page-numbers.current {
+      background: var(--brown);
+      color: var(--text);
 }
 
 /* -------------------- Collapsed State -------------------- */

@@ -20,19 +20,23 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'wpdb_wordpress' );
+
+define( 'WP_HOME', 'http://alex-hp.local' );
+define( 'WP_SITEURL', 'http://alex-hp.local' );
+
+define( 'DB_NAME', 'local' );
 
 /** Database username */
-define( 'DB_USER', 'alexwp' );
+define( 'DB_USER', 'root' );
 
 /** Database password */
-define( 'DB_PASSWORD', 'password' );
+define( 'DB_PASSWORD', 'root' );
 
 /** Database hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', 'localhost:10005' );
 
 /** Database charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8' );
+define( 'DB_CHARSET', 'utf8mb4' );
 
 /** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
@@ -48,15 +52,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',          'v&ebq|x$ 0<&f7Te$>mi=YZ>V`d8[DQ /7_EMbN12*jm;c#ku>Z/fW)GNW`rVMo0' );
-define( 'SECURE_AUTH_KEY',   '6$`W<HSfy.M%+PFf$^CPRkv t[Ig8dfO!2$4Y2hF iKv6)t4}O/ Ab$-S(nF>w0;' );
-define( 'LOGGED_IN_KEY',     'QhUU^!MY]~7p<^<XS6!X>KKYJPc@ ql[UvS?:gQfJ+,%)62,Bd5&n]+IhcJD,U1A' );
-define( 'NONCE_KEY',         'CyfX4^LIc/EJz9JWZ hqbV+ZCgdgjKM]$6p*Y;I}-KX[]mKq2@*n9!`!.sVDr8h?' );
-define( 'AUTH_SALT',         'Bs.E|;sJhL>4^fX7q.3O.0i#Ut)~O)Yzg}^;i`v[_&fM|M^HRiiy-qf:PSfP@mU4' );
-define( 'SECURE_AUTH_SALT',  'p.ve3ZSdPJP+6k*X:%Low@c-}?%]B2k?mOUs;mMRbSg$yk1X1y)5.h%/!FSisW8D' );
-define( 'LOGGED_IN_SALT',    '#4l/WHq7DzEE3eS/8&2p }K@bS+8 VS?Z:oe*mM{ biq~Al]9:3;e!a2[adv.t4l' );
-define( 'NONCE_SALT',        'VLL%Lw,M|XlQ3^H7u^3Z:u8@vW|S,KcPm@kCYUIKyCwl)cD57TU7}z5w2UL}={wR' );
-define( 'WP_CACHE_KEY_SALT', 'Xs$Gp^g9hURztxq^fadzM6anp_2O+M<(?3|_^E|SpndIIZ+G4a7`5Y _U%T;A?vt' );
+define( 'AUTH_KEY',         'm71lmbpxlk3wkfqte88z7c8h50wwcqqvh0hee4n28tnybs748kwwdx8v1rs0q16u' );
+define( 'SECURE_AUTH_KEY',  'o8wjclvtblett9rnwtolepcqhpna8ds6ff8szvwuu7pijs7znslpnokupjrmdwuw' );
+define( 'LOGGED_IN_KEY',    '9yw248witoov3jcjc7btc2hpuohtqhou6qxtwvynnojonh6aqyjhnpizvt5fkhes' );
+define( 'NONCE_KEY',        'bs3vblveh430xc6qca4hinhewcwxz34jsxjssr4l0pvpcxq2h6jjwzex0atewvn6' );
+define( 'AUTH_SALT',        'cwceanf5ywhymux7zn3uvmvdaqc0jrcehsm3bgqoo19wlu1m2bpv3jd0rrhjtknm' );
+define( 'SECURE_AUTH_SALT', 'uxdnsomvnhxfp8fnhsxd1x5l3oi3ertfkbmkycscjvvzxt7lak2iy2gwwxbopi8u' );
+define( 'LOGGED_IN_SALT',   'g8xmdiucjdwlmimeus3ogqyjf4wxryy03teyn2oik7zhun1hjdlguipdpbrq3xow' );
+define( 'NONCE_SALT',       'goqkt7ucvuwe85xugli5znciwoxauvwj9wodhigx25q0govqgn2lss46xrpfx84e' );
 
 /**#@-*/
 
@@ -72,7 +75,7 @@ define( 'WP_CACHE_KEY_SALT', 'Xs$Gp^g9hURztxq^fadzM6anp_2O+M<(?3|_^E|SpndIIZ+G4a
  *
  * @link https://developer.wordpress.org/advanced-administration/wordpress/wp-config/#table-prefix
  */
-$table_prefix = 'wp_';
+$table_prefix = 'wpjw_';
 
 /**
  * For developers: WordPress debugging mode.
@@ -86,12 +89,16 @@ $table_prefix = 'wp_';
  *
  * @link https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/
  */
-define( 'WP_DEBUG', false );
+
+define('WP_DEBUG', true);
+define('WP_DEBUG_LOG', true);
+define('WP_DEBUG_DISPLAY', false);
 
 /* Add any custom values between this line and the "stop editing" line. */
 
 
 
+define( 'WP_ENVIRONMENT_TYPE', 'local' );
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
